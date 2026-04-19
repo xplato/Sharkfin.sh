@@ -9,7 +9,7 @@ import SharkfinAppIcon from "@/public/sharkfin-app-icon.png";
 export default function Home() {
   return (
     <WithPageTransition>
-      <section className="bg-background min-h-screen w-full pt-32">
+      <section className="bg-background min-h-screen w-full py-32">
         <div className="page-container items-center gap-12">
           <div className="flex flex-col items-center gap-8">
             <div className="flex flex-col items-center justify-center gap-8">
