@@ -46,7 +46,7 @@ export default function Home() {
               </div>
 
               <p className="text-foreground/50 text-base tracking-tight">
-                Completely free and open source
+                Free and open source
               </p>
             </div>
           </div>
