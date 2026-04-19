@@ -1,0 +1,138 @@
+@import "tailwindcss";
+@plugin "tailwind-clamp";
+
+:root {
+  --background: #eae9e8;
+  --foreground: #171717;
+  --container-inset: max(1.5rem, calc((100vw - 2560px) / 2 + 1.5rem));
+}
+
+/*
+* Next.js has a subtle bug where saving changes to the stylesheet
+* doesn't always trigger a change in the preview; if you update the
+* file *again*, though, it _does_ work, so this block is used to append
+* additional, useless changes in order to get Next.js to pick up the new
+* styles.
+*/
+.useless {
+  padding: 1rem;
+}
+
+@theme {
+  /* SHARKFIN */
+  --color-seafoam: #e8f2f7;
+  --color-spray: #c8dee9;
+  --color-shallows: #92bbce;
+  --color-surf: #5596b2;
+  --color-tide: #1d7598;
+  --color-sharkfin: #005279;
+  --color-fathom: #00425f;
+  --color-trench: #003047;
+  --color-abyss: #001e2e;
+  --color-leviathan: #000f18;
+
+  /* ACCENT */
+  --color-accent: var(--color-sharkfin);
+  --color-accent-foreground: var(--color-seafoam);
+
+  --color-accent-50: var(--color-seafoam);
+  --color-accent-100: var(--color-spray);
+  --color-accent-200: var(--color-shallows);
+  --color-accent-300: var(--color-surf);
+  --color-accent-400: var(--color-tide);
+  --color-accent-500: var(--color-sharkfin);
+  --color-accent-600: var(--color-fathom);
+  --color-accent-700: var(--color-trench);
+  --color-accent-800: var(--color-abyss);
+  --color-accent-900: var(--color-leviathan);
+  --color-accent-950: var(--color-leviathan);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* ///////// */
+
+  --font-zalando: var(--font-zalando);
+  --font-bangers: var(--font-bangers);
+  --font-bricolage-grotesque: var(--font-bricolage-grotesque);
+  --font-chewy: var(--font-chewy);
+  --font-chicle: var(--font-chicle);
+  --font-dm-sans: var(--font-dm-sans);
+  --font-dynapuff: var(--font-dynapuff);
+  --font-inter: var(--font-inter);
+  --font-google-sans-code: var(--font-google-sans-code);
+  --font-jetbrains-mono: var(--font-jetbrains-mono);
+  --font-knewave: var(--font-knewave);
+  --font-outfit: var(--font-outfit);
+  --font-plus-jakarta-sans: var(--font-plus-jakarta-sans);
+  --font-league-gothic: var(--font-league-gothic);
+  --font-zalando-expanded: var(--font-zalando-expanded);
+  --font-zalando-semi-expanded: var(--font-zalando-semi-expanded);
+  --font-geist: var(--font-geist);
+  --font-geist-mono: var(--font-geist-mono);
+
+  --font-sans: var(--font-zalando);
+  --font-mono: var(--font-jetbrains-mono);
+
+  --color-ui-100: #eae9e8;
+  --color-ui-200: #d5d4d3;
+  --color-ui-300: #c0c0bf;
+  --color-ui-400: #acabaa;
+  --color-ui-500: #979696;
+  --color-ui-600: #828181;
+  --color-ui-700: #6d6d6c;
+  --color-ui-800: #585858;
+  --color-ui-900: #444343;
+  --color-ui-950: #2f2f2e;
+
+  /* Typography */
+  --clamp-heading: 3rem, 10rem;
+  --font-size-heading: var(--clamp-heading);
+  --text-heading: var(--clamp-heading);
+
+  /* Easing */
+  --ease-snap-to-silk: cubic-bezier(0.31, 0.72, 0.35, 1);
+  --ease-catapult: cubic-bezier(0.6, 0, 0, 1);
+  --ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+  --ease-material: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-material-decelerate: cubic-bezier(0, 0, 0.2, 1);
+  --ease-accelerate: cubic-bezier(0.4, 0, 1, 1);
+}
+
+body {
+  background: #171717;
+  color: var(--foreground);
+  font-family: "Zalando Sans", sans-serif;
+}
+
+@utility page-container {
+  width: 100%;
+  max-width: 2560px;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@utility inset-container-left {
+  left: max(var(--gutter), calc((100vw - 2560px) / 2 + var(--gutter)));
+}
+
+@utility inset-container-right {
+  right: max(var(--gutter), calc((100vw - 2560px) / 2 + var(--gutter)));
+}
+
+@layer base {
+  .font-outline-2 {
+    -webkit-text-stroke: 2px white;
+  }
+
+  .font-outline-4 {
+    -webkit-text-stroke: 4px var(--foreground);
+  }
+}
+
+::selection {
+  background: var(--color-accent);
+  color: black;
+}

@@ -1,0 +1,57 @@
+{
+  "name": "tristan.fyi",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "-": "^0.0.1",
+    "@gsap/react": "^2.1.2",
+    "@phosphor-icons/react": "^2.1.10",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.5.0",
+    "D": "^1.0.0",
+    "clsx": "^2.1.1",
+    "cva": "^1.0.0-beta.4",
+    "flubber": "^0.4.2",
+    "gsap": "^3.14.2",
+    "lenis": "^1.3.19",
+    "motion": "^12.38.0",
+    "next": "16.2.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-hotkeys-hook": "^5.2.4",
+    "tailwind-clamp": "^4.5.0",
+    "tailwind-clamp-merge": "^4.5.0",
+    "tailwind-merge": "^3.5.0",
+    "three": "^0.183.2",
+    "use-scramble": "^2.2.15"
+  },
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/three": "^0.183.1",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.1",
+    "prettier": "^3.8.1",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "ignoreScripts": [
+    "sharp",
+    "unrs-resolver"
+  ],
+  "trustedDependencies": [
+    "sharp",
+    "unrs-resolver"
+  ]
+}
