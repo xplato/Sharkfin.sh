@@ -10,6 +10,8 @@ import BlurStrip from "@/ui/shell/BlurStrip";
 import Footer from "@/ui/shell/Footer";
 import Navigation from "@/ui/shell/Navigation";
 
+import { SoundProvider } from "@/lib/sfx/SoundContext";
+
 export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <ReactLenis
@@ -20,22 +22,24 @@ export default function App({ Component, pageProps, router }: AppProps) {
         touchMultiplier: 1.5,
       }}
     >
-      <div className={fontClassNames}>
-        <Navigation />
+      <SoundProvider>
+        <div className={fontClassNames}>
+          <Navigation />
 
-        <LayoutGroup>
-          <AnimatePresence mode="wait">
-            <motion.div key={router.asPath}>
-              <Component {...pageProps} />
-            </motion.div>
-          </AnimatePresence>
-        </LayoutGroup>
+          <LayoutGroup>
+            <AnimatePresence mode="wait">
+              <motion.div key={router.asPath}>
+                <Component {...pageProps} />
+              </motion.div>
+            </AnimatePresence>
+          </LayoutGroup>
 
-        <Footer />
+          <Footer />
 
-        <BlurStrip position="top" />
-        <BlurStrip position="bottom" />
-      </div>
+          <BlurStrip position="top" />
+          <BlurStrip position="bottom" />
+        </div>
+      </SoundProvider>
     </ReactLenis>
   );
 }

@@ -42,13 +42,13 @@ const buttonVariants = cva({
       variant: "solid",
       color: "accent",
       mode: "light",
-      className: "bg-accent text-black border-foreground",
+      className: "bg-accent text-white border-accent",
     },
     {
       variant: "solid",
       color: "accent",
       mode: "dark",
-      className: "bg-accent text-foreground border-accent",
+      className: "bg-accent text-white border-accent",
     },
     {
       variant: "outline",
@@ -60,7 +60,7 @@ const buttonVariants = cva({
       variant: "outline",
       color: "accent",
       mode: "dark",
-      className: "bg-foreground text-accent border-accent",
+      className: "bg-transparent text-accent border-accent",
     },
 
     // MONOCHROMATIC
@@ -86,7 +86,7 @@ const buttonVariants = cva({
       variant: "outline",
       color: "neutral",
       mode: "dark",
-      className: "bg-foreground text-white border-white",
+      className: "bg-transparent text-white border-white",
     },
   ],
   defaultVariants: {
@@ -197,7 +197,12 @@ function Button<T extends ElementType = "button">({
   const handleMouseEnter = useCallback((e: React.MouseEvent) => {
     const el = e.currentTarget as HTMLElement;
     gsap.killTweensOf(el);
-    gsap.to(el, { scale: 1.05, rotation: 3, duration: 0.3, ease: "power2.out" });
+    gsap.to(el, {
+      scale: 1.05,
+      rotation: 3,
+      duration: 0.3,
+      ease: "power2.out",
+    });
   }, []);
 
   const handleMouseLeave = useCallback((e: React.MouseEvent) => {

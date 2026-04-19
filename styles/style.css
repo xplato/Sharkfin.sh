@@ -86,9 +86,13 @@
   --color-ui-950: #2f2f2e;
 
   /* Typography */
-  --clamp-heading: 3rem, 10rem;
+  --clamp-heading: 4rem, 10rem;
   --font-size-heading: var(--clamp-heading);
   --text-heading: var(--clamp-heading);
+
+  --clamp-subheading: 1rem, 1.75rem;
+  --font-size-subheading: var(--clamp-subheading);
+  --text-subheading: var(--clamp-subheading);
 
   /* Easing */
   --ease-snap-to-silk: cubic-bezier(0.31, 0.72, 0.35, 1);
@@ -97,6 +101,8 @@
   --ease-material: cubic-bezier(0.4, 0, 0.2, 1);
   --ease-material-decelerate: cubic-bezier(0, 0, 0.2, 1);
   --ease-accelerate: cubic-bezier(0.4, 0, 1, 1);
+
+  --gutter: 1.5rem;
 }
 
 body {
@@ -112,6 +118,10 @@ body {
   padding-right: var(--gutter);
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 
 @utility inset-container-left {
@@ -133,6 +143,6 @@ body {
 }
 
 ::selection {
-  background: var(--color-accent);
+  background: var(--color-shallows);
   color: black;
 }

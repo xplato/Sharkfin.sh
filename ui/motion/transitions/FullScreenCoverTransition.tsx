@@ -8,7 +8,7 @@ import { easeCatapult } from "@/lib/motion";
 const DURATION = 1;
 
 const COVER_CLASS_NAME =
-  "pointer-events-none fixed inset-0 z-40 bg-sharkfin will-change-transform";
+  "pointer-events-none fixed inset-0 z-40 bg-surf will-change-transform";
 
 export default function FullScreenCoverTransition({
   children,
