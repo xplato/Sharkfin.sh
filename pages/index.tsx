@@ -238,7 +238,18 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative z-20 h-164 w-full max-w-5xl rounded-t-3xl bg-white dark:bg-neutral-800"></div>
+            <div className="relative z-20 h-164 w-full max-w-5xl rounded-t-4xl border border-b-0 border-white/50 bg-white/30 p-3.5 pb-0 backdrop-blur-2xl">
+              <div className="flex items-center justify-center overflow-hidden rounded-t-3xl bg-white">
+                <video
+                  src="https://kmjffir9lpkjkv1u.public.blob.vercel-storage.com/sharkfin-demo-1"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
