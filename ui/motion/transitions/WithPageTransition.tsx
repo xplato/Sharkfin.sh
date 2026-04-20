@@ -1,7 +1,12 @@
 import type { PropsWithChildren } from "react";
 
+import FullScreenCoverContentTransition from "./FullScreenCoverContentTransition";
 import FullScreenCoverTransition from "./FullScreenCoverTransition";
 
 export default function WithPageTransition({ children }: PropsWithChildren) {
-  return <FullScreenCoverTransition>{children}</FullScreenCoverTransition>;
+  return (
+    <FullScreenCoverContentTransition>
+      {children}
+    </FullScreenCoverContentTransition>
+  );
 }

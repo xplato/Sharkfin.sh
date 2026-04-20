@@ -195,6 +195,7 @@ export default function TextLink({
   return (
     <Link
       href={href}
+      scroll={false}
       className={mergedClassName}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
