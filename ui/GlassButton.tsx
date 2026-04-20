@@ -13,7 +13,7 @@ import { usePlaySfx } from "@/lib/sfx/SoundContext";
 import { cn } from "@/lib/utils";
 
 const glassButtonVariants = cva({
-  base: "group relative isolate cursor-pointer overflow-hidden rounded-3xl text-foreground glass-button-shadow glass-border-3xl focus:outline-none",
+  base: "group relative isolate cursor-pointer overflow-hidden rounded-3xl text-foreground glass-button-shadow glass-border focus:outline-none",
   variants: {
     size: {
       sm: "pl-3 pr-3.5 py-1",
@@ -49,7 +49,7 @@ const contentIconVariants = cva({
 });
 
 const contentLabelVariants = cva({
-  base: "font-medium tracking-tight",
+  base: "font-medium select-none tracking-tight",
   variants: {
     size: {
       sm: "text-sm",
@@ -129,7 +129,7 @@ function GlassButton<T extends ElementType = "button">({
     <>
       <span
         aria-hidden
-        className="glass-button-bg -z-10 group-hover:[background-position:50%_100%]"
+        className="glass-button-bg -z-10 rounded-full backdrop-blur-sm group-hover:[background-position:50%_100%]"
       />
       {children ?? (
         <div className={contentGapVariants({ size })}>

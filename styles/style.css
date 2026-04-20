@@ -1,5 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+/*
+---break---
+*/
+@custom-variant dark (&:is(.dark *));
 @plugin "tailwind-clamp";
 
 :root {
@@ -91,6 +95,10 @@
   --font-size-subheading: var(--clamp-subheading);
   --text-subheading: var(--clamp-subheading);
 
+  /* Home page */
+  --clamp-cloud: 12rem, 28rem;
+  --spacing-cloud: var(--clamp-cloud);
+
   /* Easing */
   --ease-snap-to-silk: cubic-bezier(0.31, 0.72, 0.35, 1);
   --ease-catapult: cubic-bezier(0.6, 0, 0, 1);
@@ -167,7 +175,7 @@ body {
     0 2px 4px -1px var(--tw-shadow-color, #0000000f);
 }
 
-.glass-border-3xl::before {
+.glass-border::before {
   content: "";
   border-radius: var(--radius-3xl);
   pointer-events: none;
@@ -196,4 +204,29 @@ body {
   mask-composite: exclude;
   -webkit-mask-source-type: auto, auto;
   mask-mode: match-source, match-source;
+}
+
+/*
+---break---
+*/
+
+@theme inline {
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
 }

@@ -36,7 +36,6 @@ export default function App({ Component, pageProps, router }: AppProps) {
 
           <Footer />
 
-          <BlurStrip position="top" />
           <BlurStrip position="bottom" />
         </div>
       </SoundProvider>

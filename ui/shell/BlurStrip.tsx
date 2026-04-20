@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils";
+
 export default function BlurStrip({
   position = "bottom",
 }: {
@@ -35,9 +37,10 @@ export default function BlurStrip({
 
   return (
     <div
-      className={`pointer-events-none fixed right-0 left-0 z-30 h-16 ${
-        position === "top" ? "top-0" : "bottom-0"
-      }`}
+      className={cn("pointer-events-none z-30 h-16 w-full", {
+        "sticky top-0": position === "top",
+        "fixed right-0 bottom-0 left-0": position !== "top",
+      })}
     >
       {layers.map((layer, i) => (
         <div
