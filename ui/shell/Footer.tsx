@@ -2,7 +2,7 @@ import { HeartIcon } from "@phosphor-icons/react";
 
 export default function Footer() {
   return (
-    <footer className="text-background flex w-full flex-col items-center justify-center gap-12 pt-24">
+    <footer className="flex w-full flex-col items-center justify-center gap-12 pt-24 text-white">
       <div className="page-container flex flex-col items-start justify-start gap-16">
         <div className="flex w-full flex-row items-center justify-between gap-8">
           <div>

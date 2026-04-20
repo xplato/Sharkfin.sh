@@ -26,10 +26,6 @@ const buttonVariants = cva({
       accent: "",
       neutral: "",
     },
-    mode: {
-      dark: "",
-      light: "",
-    },
     size: {
       sm: "gap-2 pl-3 pr-3.5 py-1 shadow-brutal-flat-xs",
       md: "gap-3 pl-4 pr-5 py-1.5 shadow-brutal-flat-xs",
@@ -41,57 +37,30 @@ const buttonVariants = cva({
     {
       variant: "solid",
       color: "accent",
-      mode: "light",
-      className: "bg-accent text-white border-accent",
-    },
-    {
-      variant: "solid",
-      color: "accent",
-      mode: "dark",
       className: "bg-accent text-white border-accent",
     },
     {
       variant: "outline",
       color: "accent",
-      mode: "light",
-      className: "bg-accent-100 text-accent border-accent",
-    },
-    {
-      variant: "outline",
-      color: "accent",
-      mode: "dark",
-      className: "bg-transparent text-accent border-accent",
+      className: "bg-accent-100 text-accent border-accent dark:bg-transparent",
     },
 
     // MONOCHROMATIC
     {
       variant: "solid",
       color: "neutral",
-      mode: "light",
-      className: "bg-foreground text-white border-foreground",
-    },
-    {
-      variant: "solid",
-      color: "neutral",
-      mode: "dark",
-      className: "bg-white text-foreground border-white",
+      className:
+        "bg-foreground text-white border-foreground dark:bg-white dark:text-background dark:border-white",
     },
     {
       variant: "outline",
       color: "neutral",
-      mode: "light",
-      className: "bg-white text-foreground border-foreground",
-    },
-    {
-      variant: "outline",
-      color: "neutral",
-      mode: "dark",
-      className: "bg-transparent text-white border-white",
+      className:
+        "bg-white text-foreground border-foreground dark:bg-transparent dark:text-white dark:border-white",
     },
   ],
   defaultVariants: {
     variant: "solid",
-    mode: "dark",
     size: "lg",
   },
 });
@@ -156,7 +125,7 @@ function ButtonContent({
   size = "lg",
 }: Pick<
   ButtonOwnProps,
-  "variant" | "mode" | "startIcon" | "label" | "endIcon" | "size"
+  "variant" | "startIcon" | "label" | "endIcon" | "size"
 >) {
   return (
     <>
@@ -182,7 +151,6 @@ function Button<T extends ElementType = "button">({
   endIcon,
   variant = "solid",
   color = "neutral",
-  mode = "light",
   size = "md",
   soundFx = "click",
   children,
@@ -224,7 +192,7 @@ function Button<T extends ElementType = "button">({
   };
 
   const mergedClassName = cn(
-    buttonVariants({ variant, color, mode, size }),
+    buttonVariants({ variant, color, size }),
     className,
   );
 
