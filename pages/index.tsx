@@ -89,19 +89,6 @@ export default function Home() {
         <meta name="twitter:image" content="/brand/sharkfin-og.webp" />
       </Head>
 
-      <div className="bg-background w-full p-4 pb-0 sm:p-6 sm:pb-0">
-        <div className="bg-shallows w-full rounded-2xl px-6 py-4">
-          <p className="text-center text-base">
-            This website is currently being built out and is not yet complete.
-            In the meantime, you can follow along on{" "}
-            <TextLink href="https://github.com/xplato/Sharkfin.sh">
-              GitHub
-            </TextLink>
-            .
-          </p>
-        </div>
-      </div>
-
       <section className="bg-background w-full p-4 pb-12 sm:p-6">
         <div className="from-shallows to-spray relative flex items-center justify-center overflow-hidden rounded-3xl bg-linear-to-b pt-32 shadow-[0px_4px_16px_rgba(0,0,0,0.05)]">
           <div className="absolute top-16 right-0 left-0 z-10 opacity-80">
@@ -238,7 +225,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative z-20 h-164 w-full max-w-5xl rounded-t-4xl border border-b-0 border-white/50 bg-white/30 p-3.5 pb-0 backdrop-blur-2xl">
+            <div className="relative z-20 max-h-164 w-full max-w-5xl rounded-t-4xl border border-b-0 border-white/50 bg-white/30 p-3.5 pb-0 backdrop-blur-2xl">
               <div className="flex items-center justify-center overflow-hidden rounded-t-3xl bg-white">
                 <video
                   src="https://kmjffir9lpkjkv1u.public.blob.vercel-storage.com/sharkfin-demo-1"
