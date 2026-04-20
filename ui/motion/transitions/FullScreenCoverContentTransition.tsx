@@ -51,7 +51,7 @@ function TransitionContent({
           duration: mode === "enter" ? DURATION + 0.5 : DURATION,
           ease: easeCatapult,
         }}
-        className="w-64"
+        className="w-32 sm:w-48 md:w-64"
       >
         <Image src={ContentImage} alt="content" />
       </motion.div>
