@@ -26,6 +26,9 @@ export default function Footer() {
                 label="Download"
               />
               <GlassButton
+                as="a"
+                href="https://github.com/xplato/Sharkfin"
+                target="_blank"
                 size="lg"
                 startIcon={<Github className="invert dark:invert-0" />}
                 label="GitHub"
@@ -51,7 +54,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex max-h-112 w-full items-start justify-start sm:mt-0">
+        <div className="mt-16 flex max-h-128 w-full items-start justify-start">
           <TooltipImage tooltipLabel="landscape.webp">
             <Image src={LandscapeImage} alt="Landscape" />
           </TooltipImage>

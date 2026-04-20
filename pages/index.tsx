@@ -10,6 +10,7 @@ import { Apple, Github } from "@thesvg/react";
 import Marquee from "react-fast-marquee";
 
 import GlassButton from "@/ui/GlassButton";
+import GradientText from "@/ui/GradientText";
 import WithPageTransition from "@/ui/motion/transitions/WithPageTransition";
 import TextLink from "@/ui/TextLink";
 import TooltipImage from "@/ui/TooltipImage";
@@ -178,8 +179,9 @@ export default function Home() {
       <section className="bg-background w-full py-32">
         <div className="page-container items-center gap-24">
           <div className="flex max-w-3xl items-center justify-center text-center">
-            <h2 className="text-foreground/95 text-heading-3 leading-none font-medium tracking-tight">
-              Search images locally with natural language
+            <h2 className="text-foreground/95 text-heading-3 leading-tight font-medium tracking-tight">
+              Search images locally with{" "}
+              <GradientText>natural language</GradientText>
             </h2>
           </div>
 
