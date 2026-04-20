@@ -117,13 +117,17 @@ export default function ScrollingFeatureSection() {
 
             // Toggle the icon animation while this card is the topmost
             // sticky card — from when it pins until the next card covers it.
+            // The last card has no "next"; keep the trigger open until the
+            // section has fully scrolled above the viewport top. Any closer
+            // end (e.g. the card's own "bottom bottom") resolves to a
+            // scrollY earlier than the start and collapses the range.
             ScrollTrigger.create({
               trigger: card,
               start: `top top+=${STICKY_TOP_PX + ICON_ANIMATION_TRIGGER_OFFSET}`,
-              endTrigger: next ?? card,
+              endTrigger: next ?? sectionRef.current ?? card,
               end: next
                 ? `top top+=${STICKY_TOP_PX + ICON_ANIMATION_TRIGGER_OFFSET}`
-                : `bottom bottom`,
+                : "bottom top",
               onToggle: (self) => {
                 const handle = iconRefs[i]?.current;
                 if (!handle) return;
@@ -169,7 +173,7 @@ export default function ScrollingFeatureSection() {
 
   return (
     <section ref={sectionRef} className="bg-background relative w-full py-32">
-      <div className="page-container items-center gap-32">
+      <div className="page-container items-center gap-8">
         <div className="sticky top-32 z-10 flex flex-row items-center justify-center gap-4">
           <h3 className="text-8xl font-bold">Features</h3>
         </div>

@@ -3,8 +3,6 @@
 @plugin "tailwind-clamp";
 
 :root {
-  --background: #eae9e8;
-  --foreground: #171717;
   --container-inset: max(1.5rem, calc((100vw - 2560px) / 2 + 1.5rem));
 }
 
@@ -48,8 +46,9 @@
   --color-accent-900: var(--color-leviathan);
   --color-accent-950: var(--color-leviathan);
 
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  /*--color-background: #eae9e8;*/
+  --color-background: #fcf9f7;
+  --color-foreground: #171717;
 
   /* ///////// */
 
@@ -75,16 +74,13 @@
   --font-sans: var(--font-zalando);
   --font-mono: var(--font-jetbrains-mono);
 
-  --color-ui-100: #eae9e8;
-  --color-ui-200: #d5d4d3;
-  --color-ui-300: #c0c0bf;
-  --color-ui-400: #acabaa;
-  --color-ui-500: #979696;
-  --color-ui-600: #828181;
-  --color-ui-700: #6d6d6c;
-  --color-ui-800: #585858;
-  --color-ui-900: #444343;
-  --color-ui-950: #2f2f2e;
+  --glass-gradient: linear-gradient(
+    180deg,
+    #fff9,
+    #ffffff96 25%,
+    #fff9 50%,
+    #ffffffd6 75%
+  );
 
   /* Typography */
   --clamp-heading: 4rem, 10rem;
@@ -106,12 +102,12 @@
   --gutter: 1.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
   @theme {
     --color-background: #171717;
     --color-foreground: #eae9e8;
   }
-}
+}*/
 
 body {
   background: #171717;
@@ -154,4 +150,50 @@ body {
 ::selection {
   background: var(--color-shallows);
   color: black;
+}
+
+.glass-button-bg {
+  background-image: var(--glass-gradient);
+  background-position: 50% 0;
+  background-size: 300% 300%;
+  transition: background-position 0.5s;
+  position: absolute;
+  inset: 0;
+}
+
+.glass-button-shadow {
+  box-shadow:
+    0 12px 12px 2px var(--tw-shadow-color, #0000001a),
+    0 2px 4px -1px var(--tw-shadow-color, #0000000f);
+}
+
+.glass-border-3xl::before {
+  content: "";
+  border-radius: var(--radius-3xl);
+  pointer-events: none;
+  background: linear-gradient(#ffffffa3 40%, #fff0 75% 95%, #ffffffa3);
+  padding: 1px;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  inset: 0;
+  -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+  mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+  -webkit-mask-position:
+    0 0,
+    0 0;
+  mask-position:
+    0 0,
+    0 0;
+  -webkit-mask-size: auto, auto;
+  mask-size: auto, auto;
+  -webkit-mask-repeat: repeat, repeat;
+  mask-repeat: repeat, repeat;
+  -webkit-mask-clip: content-box, border-box;
+  mask-clip: content-box, border-box;
+  -webkit-mask-origin: content-box, border-box;
+  mask-origin: content-box, border-box;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  -webkit-mask-source-type: auto, auto;
+  mask-mode: match-source, match-source;
 }
