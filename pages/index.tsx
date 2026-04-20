@@ -11,6 +11,7 @@ import Marquee from "react-fast-marquee";
 
 import GlassButton from "@/ui/GlassButton";
 import WithPageTransition from "@/ui/motion/transitions/WithPageTransition";
+import TextLink from "@/ui/TextLink";
 
 import SharkfinAppIcon from "@/public/brand/sharkfin-app-icon.webp";
 import BalloonImage from "@/public/images/balloon.webp";
@@ -47,6 +48,18 @@ const FEATURES = [
 export default function Home() {
   return (
     <WithPageTransition>
+      <div className="bg-background w-full p-6 pb-0">
+        <div className="bg-shallows w-full rounded-2xl px-6 py-4">
+          <p className="text-center text-base">
+            This website is currently being built out and is not yet complete.
+            In the meantime, you can follow along on{" "}
+            <TextLink href="https://github.com/xplato/Sharkfin.sh">
+              GitHub
+            </TextLink>
+            .
+          </p>
+        </div>
+      </div>
       <section className="bg-background w-full p-6 pb-12">
         <div className="from-shallows to-spray relative flex items-center justify-center overflow-hidden rounded-3xl bg-linear-to-b pt-32 shadow-xl">
           <div className="absolute top-16 right-0 left-0 z-10 opacity-80">
