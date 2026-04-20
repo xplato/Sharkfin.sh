@@ -1,35 +1,19 @@
-import { HeartIcon } from "@phosphor-icons/react";
+import Image from "next/image";
+
+import LandscapeImage from "@/public/images/landscape.webp";
 
 export default function Footer() {
   return (
-    <footer className="bg-background flex w-full flex-col items-center justify-center gap-12 p-6 pb-0 text-white">
-      <div className="w-full rounded-3xl bg-[#171717] pt-24">
-        <div className="page-container flex flex-col items-start justify-start gap-16">
-          <div className="flex w-full flex-row items-center justify-between gap-8">
-            <div>
-              <p className="font-bricolage-grotesque text-lg font-medium">
-                Copyright &copy; {new Date().getFullYear() ?? "2026"}
-              </p>
-            </div>
-            {/*<div className="bg-foreground h-0.5 grow"></div>*/}
-            <div>
-              <p className="font-bricolage-grotesque text-lg font-medium">
-                <span>Built with</span>{" "}
-                <span className="inline-block size-4">
-                  <HeartIcon weight="fill" className="text-rose-500" />
-                </span>{" "}
-                <span>in SLC</span>
-              </p>
-            </div>
-          </div>
+    <footer className="bg-background w-full p-6">
+      <div className="bg-spray w-full overflow-hidden rounded-3xl pt-16">
+        <div className="flex w-full justify-start px-12">
+          <h2 className="text-heading-2 max-w-xl leading-[0.9] font-semibold">
+            Search, <LiquidGlassGradientText>better</LiquidGlassGradientText>.
+          </h2>
         </div>
 
-        <div className="page-container">
-          <div className="max-h-64 overflow-hidden">
-            <p className="font-zalando text-[18vw] leading-none font-semibold uppercase">
-              Sharkfin
-            </p>
-          </div>
+        <div className="flex max-h-112 w-full items-start justify-start">
+          <Image src={LandscapeImage} alt="Landscape" />
         </div>
       </div>
     </footer>

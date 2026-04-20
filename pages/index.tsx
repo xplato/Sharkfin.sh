@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <WithPageTransition>
       <section className="bg-background w-full p-6 pb-12">
-        <div className="bg-shallows relative flex items-center justify-center overflow-hidden rounded-3xl pt-32 shadow-xl">
+        <div className="from-shallows to-spray relative flex items-center justify-center overflow-hidden rounded-3xl bg-linear-to-b pt-32 shadow-xl">
           <div className="absolute top-16 right-0 left-0 z-10 opacity-80">
             <Marquee speed={10}>
               <div className="flex w-[max(76rem,200vw)] flex-row items-center justify-around">

@@ -91,6 +91,10 @@
   --font-size-heading: var(--clamp-heading);
   --text-heading: var(--clamp-heading);
 
+  --clamp-heading-2: 3rem, 8rem;
+  --font-size-heading-2: var(--clamp-heading-2);
+  --text-heading-2: var(--clamp-heading-2);
+
   --clamp-subheading: 1rem, 1.75rem;
   --font-size-subheading: var(--clamp-subheading);
   --text-subheading: var(--clamp-subheading);
@@ -155,10 +159,10 @@ body {
   }
 }
 
-::selection {
+/*::selection {
   background: var(--color-shallows);
   color: black;
-}
+}*/
 
 .glass-button-bg {
   background-image: var(--glass-gradient);
