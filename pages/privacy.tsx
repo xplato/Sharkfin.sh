@@ -9,7 +9,7 @@ import TextLink from "@/ui/TextLink";
 export default function Privacy() {
   return (
     <WithPageTransition>
-      <section className="bg-background w-full px-6 py-32">
+      <section className="bg-background w-full py-32">
         <div className="page-container items-center gap-12">
           <div className="flex w-full max-w-3xl flex-col items-start justify-start gap-12">
             <div className="flex flex-col items-start justify-start gap-8">
