@@ -178,12 +178,12 @@ export default function Home() {
       <section className="bg-background w-full py-32">
         <div className="page-container items-center gap-24">
           <div className="flex max-w-3xl items-center justify-center text-center">
-            <h2 className="text-foreground/95 text-6xl font-medium tracking-tight">
+            <h2 className="text-foreground/95 text-heading-3 leading-none font-medium tracking-tight">
               Search images locally with natural language
             </h2>
           </div>
 
-          <div className="flex flex-row items-start gap-12">
+          <div className="flex flex-row flex-wrap items-start justify-center gap-12">
             {FEATURES.map((feature) => (
               <div
                 key={feature.label}
