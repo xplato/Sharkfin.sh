@@ -25,7 +25,7 @@ export default function Footer() {
 
       <div className="page-container">
         <div className="max-h-64 overflow-hidden">
-          <p className="text-[18.5vw] leading-none font-semibold uppercase">
+          <p className="font-zalando text-[18.5vw] leading-none font-semibold uppercase">
             Sharkfin
           </p>
         </div>

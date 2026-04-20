@@ -35,7 +35,7 @@ export default function BlurStrip({
 
   return (
     <div
-      className={`pointer-events-none fixed right-0 left-0 z-0 h-16 ${
+      className={`pointer-events-none fixed right-0 left-0 z-30 h-16 ${
         position === "top" ? "top-0" : "bottom-0"
       }`}
     >
