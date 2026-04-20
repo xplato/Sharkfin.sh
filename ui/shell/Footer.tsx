@@ -13,7 +13,7 @@ import LandscapeImage from "@/public/images/landscape.webp";
 export default function Footer() {
   return (
     <footer className="bg-background relative w-full">
-      <div className="p-6">
+      <div className="p-4 sm:p-6">
         <div className="bg-spray w-full overflow-hidden rounded-3xl pt-16">
           <div className="flex w-full flex-col items-start justify-between gap-16 px-8 sm:px-12 md:flex-row">
             <div className="flex w-full flex-col gap-10">

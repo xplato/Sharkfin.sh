@@ -50,7 +50,7 @@ const FEATURES = [
 export default function Home() {
   return (
     <WithPageTransition>
-      <div className="bg-background w-full p-6 pb-0">
+      <div className="bg-background w-full p-4 pb-0 sm:p-6">
         <div className="bg-shallows w-full rounded-2xl px-6 py-4">
           <p className="text-center text-base">
             This website is currently being built out and is not yet complete.
@@ -62,7 +62,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <section className="bg-background w-full p-6 pb-12">
+      <section className="bg-background w-full p-4 pb-12 sm:p-6">
         <div className="from-shallows to-spray relative flex items-center justify-center overflow-hidden rounded-3xl bg-linear-to-b pt-32 shadow-xl">
           <div className="absolute top-16 right-0 left-0 z-10 opacity-80">
             <Marquee speed={10}>
