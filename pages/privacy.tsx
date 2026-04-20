@@ -47,8 +47,8 @@ export default function Privacy() {
                 , so you can verify this for yourself.
               </p>
               <p className="text-lg">
-                The only time Sharkfin uses the internet is the very first time
-                you launch it, to download the CLIP models that power search.
+                Sharkfin uses the internet only once, to download the CLIP
+                models that power search when you&apos;re setting up the app.
                 These are fetched from my personal Hugging Face account at{" "}
                 <TextLink href="https://huggingface.co/xplato" size="md">
                   huggingface.co/xplato
