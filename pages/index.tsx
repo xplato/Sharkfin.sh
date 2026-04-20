@@ -152,7 +152,9 @@ export default function Home() {
                 <div className="flex flex-row items-center gap-3">
                   <GlassButton
                     size="lg"
-                    startIcon={<Apple className="invert dark:invert-0" />}
+                    startIcon={
+                      <Apple className="size-full invert dark:invert-0" />
+                    }
                     label="Download"
                   />
                   <GlassButton
@@ -160,7 +162,9 @@ export default function Home() {
                     href="https://github.com/xplato/Sharkfin"
                     target="_blank"
                     size="lg"
-                    startIcon={<Github className="invert dark:invert-0" />}
+                    startIcon={
+                      <Github className="size-full invert dark:invert-0" />
+                    }
                     label="GitHub"
                   />
                 </div>
