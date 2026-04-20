@@ -152,7 +152,7 @@ export default function Home() {
                 <div className="flex size-16 items-center justify-center">
                   {feature.icon}
                 </div>
-                <p className="max-w-42 text-2xl font-medium tracking-tight">
+                <p className="max-w-42 text-2xl leading-tight font-medium tracking-tight">
                   {feature.label}
                 </p>
               </div>
