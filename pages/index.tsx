@@ -12,6 +12,7 @@ import Marquee from "react-fast-marquee";
 import GlassButton from "@/ui/GlassButton";
 import WithPageTransition from "@/ui/motion/transitions/WithPageTransition";
 import TextLink from "@/ui/TextLink";
+import TooltipImage from "@/ui/TooltipImage";
 
 import SharkfinAppIcon from "@/public/brand/sharkfin-app-icon.webp";
 import BalloonImage from "@/public/images/balloon.webp";
@@ -66,16 +67,24 @@ export default function Home() {
             <Marquee speed={10}>
               <div className="flex w-[max(76rem,200vw)] flex-row items-center justify-around">
                 <div className="max-w-cloud">
-                  <Image src={Cloud1Image} alt="Cloud" className="scale-90" />
+                  <TooltipImage tooltipLabel="cloud-1.webp">
+                    <Image src={Cloud1Image} alt="Cloud" className="scale-90" />
+                  </TooltipImage>
                 </div>
                 <div className="max-w-cloud">
-                  <Image src={Cloud2Image} alt="Cloud" />
+                  <TooltipImage tooltipLabel="cloud-2.webp">
+                    <Image src={Cloud2Image} alt="Cloud" />
+                  </TooltipImage>
                 </div>
                 <div className="max-w-cloud scale-[-1_1]">
-                  <Image src={Cloud1Image} alt="Cloud" className="scale-90" />
+                  <TooltipImage tooltipLabel="cloud-1.webp">
+                    <Image src={Cloud1Image} alt="Cloud" className="scale-90" />
+                  </TooltipImage>
                 </div>
                 <div className="max-w-cloud scale-[-1_1]">
-                  <Image src={Cloud2Image} alt="Cloud" />
+                  <TooltipImage tooltipLabel="cloud-2.webp">
+                    <Image src={Cloud2Image} alt="Cloud" />
+                  </TooltipImage>
                 </div>
               </div>
             </Marquee>
@@ -84,33 +93,48 @@ export default function Home() {
           <div className="absolute right-0 bottom-0 left-0 z-10 flex max-h-96 flex-row items-end justify-between px-8">
             <div className="flex flex-row items-end gap-0">
               <div className="max-w-24">
-                <Image src={BalloonImage} alt="Building" />
+                <TooltipImage tooltipLabel="balloon.webp">
+                  <Image src={BalloonImage} alt="Building" />
+                </TooltipImage>
               </div>
               <div className="max-w-48">
-                <Image src={Building2Image2} alt="Building" />
+                <TooltipImage tooltipLabel="building-2.webp">
+                  <Image src={Building2Image2} alt="Building" />
+                </TooltipImage>
               </div>
             </div>
             <div className="flex flex-row items-end gap-8">
               <div className="max-w-28">
-                <Image src={LighthouseImage} alt="Building" />
+                <TooltipImage
+                  tooltipLabel="lighthouse.webp"
+                  placement="top-left"
+                >
+                  <Image src={LighthouseImage} alt="Building" />
+                </TooltipImage>
               </div>
               <div className="max-w-24">
-                <Image src={House1Image} alt="Building" />
+                <TooltipImage tooltipLabel="house-1.webp" placement="top-left">
+                  <Image src={House1Image} alt="Building" />
+                </TooltipImage>
               </div>
             </div>
           </div>
 
           <div className="absolute z-10 flex flex-row items-end justify-between px-8">
             <div className="max-w-72">
-              <Image src={LeafImage} alt="Leaf" />
+              <TooltipImage tooltipLabel="leaf.webp">
+                <Image src={LeafImage} alt="Leaf" />
+              </TooltipImage>
             </div>
           </div>
 
-          <div className="page-container relative z-20 items-center gap-12">
-            <div className="flex flex-col items-center gap-8">
+          <div className="page-container items-center gap-12">
+            <div className="relative z-20 flex flex-col items-center gap-8">
               <div className="flex flex-col items-center justify-center gap-8">
                 <div className="flex size-24 items-center justify-center rounded-4xl shadow-xl">
-                  <Image src={SharkfinAppIcon} alt="Sharkfin App Icon" />
+                  <TooltipImage tooltipLabel="sharkfin-app-icon.webp">
+                    <Image src={SharkfinAppIcon} alt="Sharkfin App Icon" />
+                  </TooltipImage>
                 </div>
 
                 <div className="flex flex-col items-center justify-center gap-4">
@@ -131,6 +155,9 @@ export default function Home() {
                     label="Download"
                   />
                   <GlassButton
+                    as="a"
+                    href="https://github.com/xplato/Sharkfin"
+                    target="_blank"
                     size="lg"
                     startIcon={<Github className="invert dark:invert-0" />}
                     label="GitHub"
