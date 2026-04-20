@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import {
   CommandIcon,
@@ -50,6 +51,40 @@ const FEATURES = [
 export default function Home() {
   return (
     <WithPageTransition>
+      <Head>
+        <title>Sharkfin — A better way to find images on Mac</title>
+        <meta
+          name="description"
+          content="Sharkfin is a free, open-source, local-only image search app for macOS. Search your images with natural language — fast."
+        />
+        <meta name="theme-color" content="#ffffff" />
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content="Sharkfin — A better way to find images on Mac"
+        />
+        <meta
+          property="og:description"
+          content="Sharkfin is a free, open-source, local-only image search app for macOS. Search your images with natural language — fast."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://sharkfin.sh" />
+        <meta property="og:image" content="/brand/sharkfin-og.webp" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Sharkfin — A better way to find images on Mac"
+        />
+        <meta
+          name="twitter:description"
+          content="Sharkfin is a free, open-source, local-only image search app for macOS. Search your images with natural language — fast."
+        />
+        <meta name="twitter:image" content="/brand/sharkfin-og.webp" />
+      </Head>
+
       <div className="bg-background w-full p-4 pb-0 sm:p-6 sm:pb-0">
         <div className="bg-shallows w-full rounded-2xl px-6 py-4">
           <p className="text-center text-base">
