@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import GradientText from "@/ui/GradientText";
+
 import LandscapeImage from "@/public/images/landscape.webp";
 
 export default function Footer() {
@@ -8,7 +10,7 @@ export default function Footer() {
       <div className="bg-spray w-full overflow-hidden rounded-3xl pt-16">
         <div className="flex w-full justify-start px-12">
           <h2 className="text-heading-2 max-w-xl leading-[0.9] font-semibold">
-            Search, <LiquidGlassGradientText>better</LiquidGlassGradientText>.
+            Search, <GradientText>better.</GradientText>
           </h2>
         </div>
 
