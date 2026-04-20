@@ -50,7 +50,7 @@ const FEATURES = [
 export default function Home() {
   return (
     <WithPageTransition>
-      <div className="bg-background w-full p-4 pb-0 sm:p-6">
+      <div className="bg-background w-full p-4 pb-0 sm:p-6 sm:pb-0">
         <div className="bg-shallows w-full rounded-2xl px-6 py-4">
           <p className="text-center text-base">
             This website is currently being built out and is not yet complete.
