@@ -97,8 +97,9 @@ export default function Home() {
           </p>
         </div>
       </div>
+
       <section className="bg-background w-full p-4 pb-12 sm:p-6">
-        <div className="from-shallows to-spray relative flex items-center justify-center overflow-hidden rounded-3xl bg-linear-to-b pt-32 shadow-xl">
+        <div className="from-shallows to-spray relative flex items-center justify-center overflow-hidden rounded-3xl bg-linear-to-b pt-32 shadow-[0px_4px_16px_rgba(0,0,0,0.05)]">
           <div className="absolute top-16 right-0 left-0 z-10 opacity-80">
             <Marquee speed={10}>
               <div className="flex w-[max(76rem,200vw)] flex-row items-center justify-around">
