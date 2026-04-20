@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowLeftIcon } from "@phosphor-icons/react";
 
 import GlassButton from "@/ui/GlassButton";
@@ -31,6 +32,7 @@ export default function FourOhFour() {
               </div>
 
               <GlassButton
+                as={Link}
                 href="/"
                 startIcon={<ArrowLeftIcon weight="bold" />}
                 label="Go back home"
