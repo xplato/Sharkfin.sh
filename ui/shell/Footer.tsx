@@ -65,7 +65,7 @@ export default function Footer() {
 
               <div className="flex flex-col items-start gap-2 md:items-end">
                 <p className="flex flex-row items-center justify-center gap-2 text-base font-medium whitespace-nowrap">
-                  <span>Made with</span>
+                  <span>Hand crafted with</span>
                   <HeartIcon weight="fill" className="size-5 text-red-500" />
                   <span>in Salt Lake City</span>
                 </p>

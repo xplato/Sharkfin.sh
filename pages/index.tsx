@@ -22,8 +22,12 @@ import Building2Image2 from "@/public/images/building-2.webp";
 import Cloud1Image from "@/public/images/cloud-1.webp";
 import Cloud2Image from "@/public/images/cloud-2.webp";
 import House1Image from "@/public/images/house-1.webp";
+import House2Image from "@/public/images/house-2.webp";
 import LeafImage from "@/public/images/leaf.webp";
 import LighthouseImage from "@/public/images/lighthouse.webp";
+import PyramidImage from "@/public/images/pyramid.webp";
+import TurbineImage from "@/public/images/turbine.webp";
+import WildlifeSignImage from "@/public/images/wildlife-sign.webp";
 
 const FEATURES = [
   {
@@ -131,7 +135,7 @@ export default function Home() {
             <div className="flex flex-row items-end gap-0">
               <div className="max-w-24">
                 <TooltipImage tooltipLabel="balloon.webp">
-                  <Image src={BalloonImage} alt="Building" />
+                  <Image src={BalloonImage} alt="Pink Balloon" />
                 </TooltipImage>
               </div>
               <div className="max-w-48">
@@ -139,19 +143,42 @@ export default function Home() {
                   <Image src={Building2Image2} alt="Building" />
                 </TooltipImage>
               </div>
+              <div className="max-w-26">
+                <TooltipImage tooltipLabel="house-2.webp" placement="top-left">
+                  <Image src={House2Image} alt="House" />
+                </TooltipImage>
+              </div>
+              <div className="ml-4 max-w-26">
+                <TooltipImage
+                  tooltipLabel="wildlife-sign.webp"
+                  placement="top-left"
+                >
+                  <Image src={WildlifeSignImage} alt="Wildlife sign" />
+                </TooltipImage>
+              </div>
             </div>
             <div className="flex flex-row items-end gap-8">
+              <div className="max-w-56">
+                <TooltipImage tooltipLabel="pyramid.webp" placement="top-left">
+                  <Image src={PyramidImage} alt="Pyramid of Giza" />
+                </TooltipImage>
+              </div>
+              <div className="max-w-26">
+                <TooltipImage tooltipLabel="turbine.webp" placement="top-left">
+                  <Image src={TurbineImage} alt="Wind Turbine" />
+                </TooltipImage>
+              </div>
               <div className="max-w-28">
                 <TooltipImage
                   tooltipLabel="lighthouse.webp"
                   placement="top-left"
                 >
-                  <Image src={LighthouseImage} alt="Building" />
+                  <Image src={LighthouseImage} alt="Lighthouse" />
                 </TooltipImage>
               </div>
               <div className="max-w-24">
                 <TooltipImage tooltipLabel="house-1.webp" placement="top-left">
-                  <Image src={House1Image} alt="Building" />
+                  <Image src={House1Image} alt="House" />
                 </TooltipImage>
               </div>
             </div>
@@ -216,7 +243,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-background w-full py-32">
+      <section className="bg-background w-full py-20 sm:py-24 md:py-32">
         <div className="page-container items-center gap-24">
           <div className="flex max-w-3xl items-center justify-center text-center">
             <h2 className="text-foreground/95 text-heading-3 leading-tight font-medium tracking-tight">
@@ -231,10 +258,10 @@ export default function Home() {
                 key={feature.label}
                 className="flex flex-col items-center justify-center gap-6 text-center"
               >
-                <div className="flex size-16 items-center justify-center">
+                <div className="flex size-12 items-center justify-center sm:size-16">
                   {feature.icon}
                 </div>
-                <p className="max-w-42 text-2xl leading-tight font-medium tracking-tight">
+                <p className="max-w-42 text-xl leading-tight font-medium tracking-tight sm:text-2xl">
                   {feature.label}
                 </p>
               </div>
