@@ -1,10 +1,16 @@
 import Image from "next/image";
+import {
+  CommandIcon,
+  FolderLockIcon,
+  GiftIcon,
+  HandPeaceIcon,
+  LightningIcon,
+} from "@phosphor-icons/react";
 import { Apple, Github } from "@thesvg/react";
 import Marquee from "react-fast-marquee";
 
 import GlassButton from "@/ui/GlassButton";
 import WithPageTransition from "@/ui/motion/transitions/WithPageTransition";
-import ScrollingFeatureSection from "@/ui/pages/home/ScrollingFeatureSection";
 
 import SharkfinAppIcon from "@/public/brand/sharkfin-app-icon.webp";
 import BalloonImage from "@/public/images/balloon.webp";
@@ -14,6 +20,29 @@ import Cloud2Image from "@/public/images/cloud-2.webp";
 import House1Image from "@/public/images/house-1.webp";
 import LeafImage from "@/public/images/leaf.webp";
 import LighthouseImage from "@/public/images/lighthouse.webp";
+
+const FEATURES = [
+  {
+    icon: <GiftIcon weight="light" className="size-full" />,
+    label: "Free & open source",
+  },
+  {
+    icon: <FolderLockIcon weight="light" className="size-full" />,
+    label: "Local only, zero cloud",
+  },
+  {
+    icon: <LightningIcon weight="light" className="size-full" />,
+    label: "Crazy fast, seriously",
+  },
+  {
+    icon: <HandPeaceIcon weight="light" className="size-full" />,
+    label: "Search with natural language",
+  },
+  {
+    icon: <CommandIcon weight="light" className="size-full" />,
+    label: "Built macOS native",
+  },
+];
 
 export default function Home() {
   return (
@@ -106,7 +135,31 @@ export default function Home() {
         </div>
       </section>
 
-      <ScrollingFeatureSection />
+      <section className="bg-background w-full py-32">
+        <div className="page-container items-center gap-24">
+          <div className="flex max-w-3xl items-center justify-center text-center">
+            <h2 className="text-foreground/95 text-6xl font-medium tracking-tight">
+              Search images locally with natural language
+            </h2>
+          </div>
+
+          <div className="flex flex-row items-start gap-12">
+            {FEATURES.map((feature) => (
+              <div
+                key={feature.label}
+                className="flex flex-col items-center justify-center gap-6 text-center"
+              >
+                <div className="flex size-16 items-center justify-center">
+                  {feature.icon}
+                </div>
+                <p className="max-w-42 text-2xl font-medium tracking-tight">
+                  {feature.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </WithPageTransition>
   );
 }
