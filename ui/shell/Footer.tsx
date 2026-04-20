@@ -6,7 +6,7 @@ import GradientText from "@/ui/GradientText";
 
 import GlassButton from "../GlassButton";
 import TextLink from "../TextLink";
-import TooltipImage from "../TooltipImage";
+import WithDecorativeGlassTooltip from "../WithDecorativeGlassTooltip";
 
 import LandscapeImage from "@/public/images/landscape.webp";
 
@@ -88,9 +88,9 @@ export default function Footer() {
       </div>
 
       <div className="absolute right-0 bottom-0 left-0 max-h-156 w-full overflow-hidden">
-        <TooltipImage tooltipLabel="landscape.webp">
+        <WithDecorativeGlassTooltip tooltipLabel="landscape.webp">
           <Image src={LandscapeImage} alt="Landscape" />
-        </TooltipImage>
+        </WithDecorativeGlassTooltip>
       </div>
     </footer>
   );

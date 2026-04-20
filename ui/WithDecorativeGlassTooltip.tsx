@@ -12,7 +12,7 @@ type QuickTo = ReturnType<typeof gsap.quickTo>;
 
 type TooltipPlacement = "top-right" | "top-left";
 
-type TooltipImageProps = PropsWithChildren<{
+type WithDecorativeGlassTooltipProps = PropsWithChildren<{
   tooltipLabel: string;
   placement?: TooltipPlacement;
 }>;
@@ -25,11 +25,11 @@ const subscribe = () => () => {};
 const getClientSnapshot = () => true;
 const getServerSnapshot = () => false;
 
-export default function TooltipImage({
+export default function WithDecorativeGlassTooltip({
   tooltipLabel,
   placement = "top-right",
   children,
-}: TooltipImageProps) {
+}: WithDecorativeGlassTooltipProps) {
   const tooltipRef = useRef<HTMLDivElement>(null);
   const xToRef = useRef<QuickTo | null>(null);
   const yToRef = useRef<QuickTo | null>(null);

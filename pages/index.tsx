@@ -13,8 +13,7 @@ import Marquee from "react-fast-marquee";
 import GlassButton from "@/ui/GlassButton";
 import GradientText from "@/ui/GradientText";
 import WithPageTransition from "@/ui/motion/transitions/WithPageTransition";
-import TextLink from "@/ui/TextLink";
-import TooltipImage from "@/ui/TooltipImage";
+import WithDecorativeGlassTooltip from "@/ui/WithDecorativeGlassTooltip";
 
 import SharkfinAppIcon from "@/public/brand/sharkfin-app-icon.webp";
 import BalloonImage from "@/public/images/balloon.webp";
@@ -95,24 +94,24 @@ export default function Home() {
             <Marquee speed={10}>
               <div className="flex w-[max(76rem,200vw)] flex-row items-center justify-around">
                 <div className="max-w-cloud">
-                  <TooltipImage tooltipLabel="cloud-1.webp">
+                  <WithDecorativeGlassTooltip tooltipLabel="cloud-1.webp">
                     <Image src={Cloud1Image} alt="Cloud" className="scale-90" />
-                  </TooltipImage>
+                  </WithDecorativeGlassTooltip>
                 </div>
                 <div className="max-w-cloud">
-                  <TooltipImage tooltipLabel="cloud-2.webp">
+                  <WithDecorativeGlassTooltip tooltipLabel="cloud-2.webp">
                     <Image src={Cloud2Image} alt="Cloud" />
-                  </TooltipImage>
+                  </WithDecorativeGlassTooltip>
                 </div>
                 <div className="max-w-cloud scale-[-1_1]">
-                  <TooltipImage tooltipLabel="cloud-1.webp">
+                  <WithDecorativeGlassTooltip tooltipLabel="cloud-1.webp">
                     <Image src={Cloud1Image} alt="Cloud" className="scale-90" />
-                  </TooltipImage>
+                  </WithDecorativeGlassTooltip>
                 </div>
                 <div className="max-w-cloud scale-[-1_1]">
-                  <TooltipImage tooltipLabel="cloud-2.webp">
+                  <WithDecorativeGlassTooltip tooltipLabel="cloud-2.webp">
                     <Image src={Cloud2Image} alt="Cloud" />
-                  </TooltipImage>
+                  </WithDecorativeGlassTooltip>
                 </div>
               </div>
             </Marquee>
@@ -121,61 +120,73 @@ export default function Home() {
           <div className="absolute right-0 bottom-0 left-0 z-10 flex max-h-96 flex-row items-end justify-between px-8">
             <div className="flex flex-row items-end gap-0">
               <div className="max-w-24">
-                <TooltipImage tooltipLabel="balloon.webp">
+                <WithDecorativeGlassTooltip tooltipLabel="balloon.webp">
                   <Image src={BalloonImage} alt="Pink Balloon" />
-                </TooltipImage>
+                </WithDecorativeGlassTooltip>
               </div>
               <div className="max-w-48">
-                <TooltipImage tooltipLabel="building-2.webp">
+                <WithDecorativeGlassTooltip tooltipLabel="building-2.webp">
                   <Image src={Building2Image2} alt="Building" />
-                </TooltipImage>
+                </WithDecorativeGlassTooltip>
               </div>
               <div className="max-w-26">
-                <TooltipImage tooltipLabel="house-2.webp" placement="top-left">
+                <WithDecorativeGlassTooltip
+                  tooltipLabel="house-2.webp"
+                  placement="top-left"
+                >
                   <Image src={House2Image} alt="House" />
-                </TooltipImage>
+                </WithDecorativeGlassTooltip>
               </div>
               <div className="ml-4 max-w-26">
-                <TooltipImage
+                <WithDecorativeGlassTooltip
                   tooltipLabel="wildlife-sign.webp"
                   placement="top-left"
                 >
                   <Image src={WildlifeSignImage} alt="Wildlife sign" />
-                </TooltipImage>
+                </WithDecorativeGlassTooltip>
               </div>
             </div>
             <div className="flex flex-row items-end gap-8">
               <div className="max-w-56">
-                <TooltipImage tooltipLabel="pyramid.webp" placement="top-left">
+                <WithDecorativeGlassTooltip
+                  tooltipLabel="pyramid.webp"
+                  placement="top-left"
+                >
                   <Image src={PyramidImage} alt="Pyramid of Giza" />
-                </TooltipImage>
+                </WithDecorativeGlassTooltip>
               </div>
               <div className="max-w-26">
-                <TooltipImage tooltipLabel="turbine.webp" placement="top-left">
+                <WithDecorativeGlassTooltip
+                  tooltipLabel="turbine.webp"
+                  placement="top-left"
+                >
                   <Image src={TurbineImage} alt="Wind Turbine" />
-                </TooltipImage>
+                </WithDecorativeGlassTooltip>
               </div>
               <div className="max-w-28">
-                <TooltipImage
+                <WithDecorativeGlassTooltip
                   tooltipLabel="lighthouse.webp"
                   placement="top-left"
                 >
                   <Image src={LighthouseImage} alt="Lighthouse" />
-                </TooltipImage>
+                </WithDecorativeGlassTooltip>
               </div>
               <div className="max-w-24">
-                <TooltipImage tooltipLabel="house-1.webp" placement="top-left">
+                <WithDecorativeGlassTooltip
+                  tooltipLabel="house-1.webp"
+                  placement="top-left"
+                >
                   <Image src={House1Image} alt="House" />
-                </TooltipImage>
+                </WithDecorativeGlassTooltip>
               </div>
             </div>
           </div>
 
           <div className="absolute z-10 flex flex-row items-end justify-between px-8">
             <div className="max-w-72">
-              <TooltipImage tooltipLabel="leaf.webp">
+              <WithDecorativeGlassTooltip tooltipLabel="leaf.webp">
                 <Image src={LeafImage} alt="Leaf" />
-              </TooltipImage>
+              </WithDecorativeGlassTooltip>
             </div>
           </div>
 
@@ -183,9 +194,9 @@ export default function Home() {
             <div className="relative z-20 flex flex-col items-center gap-8">
               <div className="flex flex-col items-center justify-center gap-8">
                 <div className="flex size-24 items-center justify-center rounded-4xl shadow-xl">
-                  <TooltipImage tooltipLabel="sharkfin-app-icon.webp">
+                  <WithDecorativeGlassTooltip tooltipLabel="sharkfin-app-icon.webp">
                     <Image src={SharkfinAppIcon} alt="Sharkfin App Icon" />
-                  </TooltipImage>
+                  </WithDecorativeGlassTooltip>
                 </div>
 
                 <div className="flex flex-col items-center justify-center gap-4">
