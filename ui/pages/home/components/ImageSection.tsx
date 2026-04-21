@@ -45,10 +45,10 @@ export default function ImageSection({
           <div className="flex w-full max-w-6xl flex-col items-start justify-start gap-16">
             <div className="px-6">
               <div className="flex flex-col items-start justify-start gap-1">
-                <h3 className="text-heading-3 leading-none font-bold">
+                <h3 className="text-heading-4 leading-none font-bold">
                   {title}
                 </h3>
-                <h3 className="text-heading-3 leading-none font-medium">
+                <h3 className="text-heading-4 leading-none font-medium">
                   <span
                     className={cn(
                       variant === "light" && "text-foreground/50",

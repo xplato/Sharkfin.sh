@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowSquareOutIcon, HeartIcon } from "@phosphor-icons/react";
+import { HeartIcon } from "@phosphor-icons/react";
 import { Apple, Github } from "@thesvg/react";
 
 import GradientText from "@/ui/GradientText";
@@ -17,9 +17,14 @@ export default function Footer() {
         <div className="bg-spray w-full overflow-hidden rounded-3xl pt-16">
           <div className="flex w-full flex-col items-start justify-between gap-16 px-8 sm:px-12 md:flex-row">
             <div className="flex w-full flex-col gap-10">
-              <h2 className="text-heading-2 max-w-xl leading-[0.9] font-semibold">
-                Search, <GradientText>better.</GradientText>
-              </h2>
+              <div className="flex flex-col items-start justify-start gap-0">
+                <h2 className="text-heading-3 max-w-4xl leading-[0.9] font-semibold">
+                  Less searching.
+                </h2>
+                <h2 className="text-heading-3 max-w-4xl leading-tight font-semibold">
+                  <GradientText>More finding.</GradientText>
+                </h2>
+              </div>
               <div className="flex flex-row items-center gap-3">
                 <GlassButton
                   size="lg"

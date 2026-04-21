@@ -18,7 +18,7 @@
 * styles.
 */
 .useless {
-  padding: 2=1rem;
+  padding: 1rem;
 }
 
 @theme {
@@ -103,9 +103,13 @@
   --font-size-heading-2: var(--clamp-heading-2);
   --text-heading-2: var(--clamp-heading-2);
 
-  --clamp-heading-3: 2rem, 4rem;
+  --clamp-heading-3: 2.5rem, 6rem;
   --font-size-heading-3: var(--clamp-heading-3);
   --text-heading-3: var(--clamp-heading-3);
+
+  --clamp-heading-4: 2rem, 4rem;
+  --font-size-heading-4: var(--clamp-heading-4);
+  --text-heading-4: var(--clamp-heading-4);
 
   --clamp-subheading: 1.25rem, 2rem;
   --font-size-subheading: var(--clamp-subheading);
