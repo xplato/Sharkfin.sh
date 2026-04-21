@@ -55,8 +55,8 @@ export default function Home() {
       <HeroSection />
       <FeatureSection />
       <ImageSection
-        title="Liquid Glass,"
-        subtitle="a look that's distinctly Mac"
+        title="Liquid Glass."
+        subtitle="A look that's distinctly Mac."
         primaryImage={{
           src: SearchbarMediumImage,
           alt: "Sharkfin Searchbar over a light geometric background",
@@ -78,8 +78,8 @@ export default function Home() {
         center."
       />
       <ImageSection
-        title="Where there's light..."
-        subtitle="Sharkfin retreats to the shadows"
+        title="When night falls,"
+        subtitle="Sharkfin retreats to the shadows."
         primaryImage={{
           src: DarkSearchbarMediumImage,
           alt: "Sharkfin Searchbar over a dark geometric background",
@@ -88,12 +88,12 @@ export default function Home() {
         firstDualImage={{
           src: Closeup1DarkImage,
           alt: "Sharkfin searchbar showing results for 'ice cream cone' on a sandy textured background",
-          tooltipLabel: "closeup-1.webp",
+          tooltipLabel: "closeup-dark-1.webp",
         }}
         secondDualImage={{
           src: Closeup2DarkImage,
           alt: "Sharkfin searchbar showing results for 'pyramid' on a light cyan background",
-          tooltipLabel: "closeup-2.webp",
+          tooltipLabel: "closeup-dark-2.webp",
         }}
         description="In dark mode, Sharkfin shifts to a subtle black glass, and the search bar takes on a metallic gray—so contrast stays sharp no matter the lighting."
         variant="dark"
@@ -101,7 +101,7 @@ export default function Home() {
       />
       <ImageSection
         title="Surprisingly relevant."
-        subtitle="Search with natural language"
+        subtitle="Search with natural language."
         primaryImage={{
           src: RelevanceImage1,
           alt: "Sharkfin Searchbar over a light geometric background",

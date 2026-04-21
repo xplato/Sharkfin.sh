@@ -37,21 +37,19 @@ export default function ImageSection({
     <section className="bg-background w-full p-4 pb-0! md:p-6">
       <div
         className={cn("rounded-3xl py-24 sm:py-32 md:py-40", {
-          "text-background bg-linear-to-b from-neutral-800 to-neutral-900":
+          "text-background bg-linear-to-t from-neutral-800 to-neutral-900":
             variant === "dark",
         })}
       >
         <div className="page-container items-center">
           <div className="flex w-full max-w-6xl flex-col items-start justify-start gap-16">
-            <div className="px-6">
+            <div className="px-8">
               <div className="flex flex-col items-start justify-start gap-1">
-                <h3 className="text-heading-4 leading-none font-bold">
-                  {title}
-                </h3>
-                <h3 className="text-heading-4 leading-none font-medium">
+                <h3 className="text-heading-4 leading-none font-semibold">
+                  <span>{title}</span>{" "}
                   <span
                     className={cn(
-                      variant === "light" && "text-foreground/50",
+                      variant === "light" && "text-foreground/45",
                       variant === "dark" && "text-background/35",
                     )}
                   >
@@ -102,8 +100,8 @@ export default function ImageSection({
               </div>
             </div>
 
-            <div className="px-6">
-              <p className="text-subheading leading-snug font-[450]">
+            <div className="px-8">
+              <p className="text-subheading leading-snug font-medium">
                 {description}
               </p>
             </div>
