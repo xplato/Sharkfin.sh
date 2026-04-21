@@ -93,6 +93,7 @@ export default function Home() {
           tooltipLabel: "closeup-2.webp",
         }}
         description="In dark mode, Sharkfin shifts to a subtle black glass, and the search bar takes on a metallic gray—so contrast stays sharp no matter the lighting."
+        variant="dark"
         forceTooltipColorMode="dark"
       />
     </WithPageTransition>
