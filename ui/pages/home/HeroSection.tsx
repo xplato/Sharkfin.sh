@@ -3,6 +3,7 @@ import { Apple, Github } from "@thesvg/react";
 import Marquee from "react-fast-marquee";
 
 import GlassButton from "@/ui/GlassButton";
+import AnimateIn from "@/ui/motion/AnimateIn";
 import WithDecorativeGlassTooltip from "@/ui/WithDecorativeGlassTooltip";
 
 import SharkfinAppIcon from "@/public/brand/sharkfin-app-icon.webp";
@@ -18,49 +19,74 @@ import PyramidImage from "@/public/images/pyramid.webp";
 import TurbineImage from "@/public/images/turbine.webp";
 import WildlifeSignImage from "@/public/images/wildlife-sign.webp";
 
+const STEP_DELAY = 0.15;
+const BOTTOM_ROW_STAGGER = 0.04;
+
+const DELAY = {
+  clouds: 0,
+  leaf: STEP_DELAY * 3,
+  bottomRow: 0,
+  appIcon: STEP_DELAY * 1,
+  heading: STEP_DELAY * 2,
+  subheading: STEP_DELAY * 3,
+  buttons: STEP_DELAY * 4,
+  video: STEP_DELAY * 1,
+};
+
 export default function HeroSection() {
   return (
     <section className="bg-background w-full p-4 pb-12 sm:p-6">
-      <div className="from-shallows to-spray relative flex items-center justify-center overflow-hidden rounded-3xl bg-linear-to-b pt-32 shadow-[0px_4px_16px_rgba(0,0,0,0.05)]">
-        <div className="absolute top-16 right-0 left-0 z-10 opacity-80">
-          <Marquee speed={10}>
-            <div className="flex w-[max(76rem,200vw)] flex-row items-center justify-around">
-              <div className="max-w-cloud">
-                <WithDecorativeGlassTooltip tooltipLabel="cloud-1.webp">
-                  <Image
-                    src={Cloud1Image}
-                    alt="Cloud"
-                    loading="eager"
-                    className="scale-90"
-                  />
-                </WithDecorativeGlassTooltip>
+      <div className="from-shallows to-spray relative flex items-center justify-center overflow-hidden rounded-3xl bg-linear-to-b pt-20 shadow-[0px_4px_16px_rgba(0,0,0,0.05)] sm:pt-24 md:pt-32">
+        <AnimateIn
+          variant="fadeScale"
+          delay={DELAY.clouds}
+          className="absolute top-16 right-0 left-0 z-10"
+        >
+          <div className="opacity-80">
+            <Marquee speed={10}>
+              <div className="flex w-[max(76rem,200vw)] flex-row items-center justify-around">
+                <div className="max-w-cloud">
+                  <WithDecorativeGlassTooltip tooltipLabel="cloud-1.webp">
+                    <Image
+                      src={Cloud1Image}
+                      alt="Cloud"
+                      loading="eager"
+                      className="scale-90"
+                    />
+                  </WithDecorativeGlassTooltip>
+                </div>
+                <div className="max-w-cloud">
+                  <WithDecorativeGlassTooltip tooltipLabel="cloud-2.webp">
+                    <Image src={Cloud2Image} alt="Cloud" loading="eager" />
+                  </WithDecorativeGlassTooltip>
+                </div>
+                <div className="max-w-cloud scale-[-1_1]">
+                  <WithDecorativeGlassTooltip tooltipLabel="cloud-1.webp">
+                    <Image
+                      src={Cloud1Image}
+                      alt="Cloud"
+                      loading="eager"
+                      className="scale-90"
+                    />
+                  </WithDecorativeGlassTooltip>
+                </div>
+                <div className="max-w-cloud scale-[-1_1]">
+                  <WithDecorativeGlassTooltip tooltipLabel="cloud-2.webp">
+                    <Image src={Cloud2Image} alt="Cloud" loading="eager" />
+                  </WithDecorativeGlassTooltip>
+                </div>
               </div>
-              <div className="max-w-cloud">
-                <WithDecorativeGlassTooltip tooltipLabel="cloud-2.webp">
-                  <Image src={Cloud2Image} alt="Cloud" loading="eager" />
-                </WithDecorativeGlassTooltip>
-              </div>
-              <div className="max-w-cloud scale-[-1_1]">
-                <WithDecorativeGlassTooltip tooltipLabel="cloud-1.webp">
-                  <Image
-                    src={Cloud1Image}
-                    alt="Cloud"
-                    loading="eager"
-                    className="scale-90"
-                  />
-                </WithDecorativeGlassTooltip>
-              </div>
-              <div className="max-w-cloud scale-[-1_1]">
-                <WithDecorativeGlassTooltip tooltipLabel="cloud-2.webp">
-                  <Image src={Cloud2Image} alt="Cloud" loading="eager" />
-                </WithDecorativeGlassTooltip>
-              </div>
-            </div>
-          </Marquee>
-        </div>
+            </Marquee>
+          </div>
+        </AnimateIn>
 
-        <div className="absolute right-0 bottom-0 left-0 z-10 flex max-h-96 flex-row items-end justify-between px-8">
-          <div className="flex flex-row items-end gap-0">
+        <div className="absolute right-0 bottom-0 left-0 z-10 hidden max-h-96 flex-row items-end justify-between px-8 sm:flex">
+          <AnimateIn
+            variant="fadeUp"
+            delay={DELAY.bottomRow}
+            stagger={BOTTOM_ROW_STAGGER}
+            className="flex flex-row items-end gap-0"
+          >
             <div className="max-w-24">
               <WithDecorativeGlassTooltip tooltipLabel="balloon.webp">
                 <Image src={BalloonImage} alt="Pink Balloon" loading="eager" />
@@ -85,8 +111,13 @@ export default function HeroSection() {
                 />
               </WithDecorativeGlassTooltip>
             </div>
-          </div>
-          <div className="flex flex-row items-end gap-8">
+          </AnimateIn>
+          <AnimateIn
+            variant="fadeUp"
+            delay={DELAY.bottomRow}
+            stagger={BOTTOM_ROW_STAGGER}
+            className="flex flex-row items-end gap-8"
+          >
             <div className="max-w-56">
               <WithDecorativeGlassTooltip
                 tooltipLabel="pyramid.webp"
@@ -123,21 +154,29 @@ export default function HeroSection() {
                 <Image src={House1Image} alt="House" loading="eager" />
               </WithDecorativeGlassTooltip>
             </div>
-          </div>
+          </AnimateIn>
         </div>
 
-        <div className="absolute z-10 flex flex-row items-end justify-between px-8">
+        <AnimateIn
+          variant="fadeScale"
+          delay={DELAY.leaf}
+          className="absolute z-10 flex flex-row items-end justify-between px-8"
+        >
           <div className="max-w-32 sm:max-w-64 md:max-w-72">
             <WithDecorativeGlassTooltip tooltipLabel="leaf.webp">
               <Image src={LeafImage} alt="Leaf" loading="eager" />
             </WithDecorativeGlassTooltip>
           </div>
-        </div>
+        </AnimateIn>
 
         <div className="page-container items-center gap-12 px-0 sm:px-6">
           <div className="relative z-20 flex flex-col items-center gap-8">
             <div className="flex flex-col items-center justify-center gap-8">
-              <div className="flex size-24 items-center justify-center rounded-4xl shadow-xl">
+              <AnimateIn
+                variant="fadeScale"
+                delay={DELAY.appIcon}
+                className="flex size-24 items-center justify-center rounded-4xl shadow-xl"
+              >
                 <WithDecorativeGlassTooltip tooltipLabel="sharkfin-app-icon.webp">
                   <Image
                     src={SharkfinAppIcon}
@@ -145,19 +184,33 @@ export default function HeroSection() {
                     loading="eager"
                   />
                 </WithDecorativeGlassTooltip>
-              </div>
+              </AnimateIn>
 
               <div className="flex flex-col items-center justify-center gap-4">
-                <h1 className="text-heading font-zalando leading-none font-semibold tracking-tight">
+                <AnimateIn
+                  as="h1"
+                  variant="fadeUp"
+                  delay={DELAY.heading}
+                  className="text-heading font-zalando leading-none font-semibold tracking-tight"
+                >
                   Sharkfin
-                </h1>
+                </AnimateIn>
 
-                <h2 className="text-foreground/75 text-subheading leading-none font-medium tracking-tight">
+                <AnimateIn
+                  as="h2"
+                  variant="fadeUp"
+                  delay={DELAY.subheading}
+                  className="text-foreground/75 text-subheading leading-none font-medium tracking-tight"
+                >
                   A better way to find images on Mac
-                </h2>
+                </AnimateIn>
               </div>
             </div>
-            <div className="flex flex-col items-center gap-3">
+            <AnimateIn
+              variant="fadeUp"
+              delay={DELAY.buttons}
+              className="flex flex-col items-center gap-3"
+            >
               <div className="flex flex-row items-center gap-3">
                 {/* TODO: Uncomment once published */}
                 {/*<GlassButton
@@ -178,14 +231,14 @@ export default function HeroSection() {
                   label="GitHub"
                 />
               </div>
-
-              <p className="text-foreground/50 text-base tracking-tight">
-                Coming soon to the App Store
-              </p>
-            </div>
+            </AnimateIn>
           </div>
 
-          <div className="relative z-20 max-h-164 w-full max-w-5xl rounded-t-4xl border-0 border-white/60 bg-white/30 sm:border sm:border-b-0 sm:p-3.5 sm:pb-0 sm:backdrop-blur-2xl">
+          <AnimateIn
+            variant="fadeScale"
+            delay={DELAY.video}
+            className="relative z-20 max-h-164 w-full max-w-5xl rounded-t-4xl border-0 border-white/60 bg-white/30 sm:border sm:border-b-0 sm:p-3.5 sm:pb-0 sm:backdrop-blur-2xl"
+          >
             <div className="flex items-center justify-center overflow-hidden rounded-t-3xl border border-x-0 border-b-0 border-white/60 sm:border-x">
               <video
                 src="https://kmjffir9lpkjkv1u.public.blob.vercel-storage.com/sharkfin-demo-4"
@@ -196,7 +249,7 @@ export default function HeroSection() {
                 className="h-full w-full object-cover"
               />
             </div>
-          </div>
+          </AnimateIn>
         </div>
       </div>
     </section>
