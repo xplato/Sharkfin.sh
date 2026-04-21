@@ -41,7 +41,7 @@ export default function ImageSection({
         })}
       >
         <div className="page-container items-center">
-          <div className="flex w-full max-w-6xl flex-col items-start justify-start gap-12">
+          <div className="flex w-full max-w-6xl flex-col items-start justify-start gap-16">
             <div className="px-6">
               <div className="flex flex-col items-start justify-start gap-1">
                 <h3 className="text-heading-3 leading-none font-bold">
