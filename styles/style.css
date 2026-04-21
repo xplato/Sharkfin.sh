@@ -1,10 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-/*
----break---
-*/
-@custom-variant dark (&:is(.dark *));
 @plugin "tailwind-clamp";
+
+@custom-variant dark (&:is(.dark *));
 
 :root {
   --container-inset: max(1.5rem, calc((100vw - 2560px) / 2 + 1.5rem));
@@ -142,9 +140,8 @@
 }*/
 
 body {
-  background: #171717;
+  background: #fcf9f7;
   color: var(--color-foreground);
-  /*font-family: "Zalando Sans", sans-serif;*/
   font-family: ui-sans-serif, system-ui, "Zalando Sans", "Inter", sans-serif;
 }
 
@@ -178,11 +175,6 @@ body {
     -webkit-text-stroke: 4px var(--foreground);
   }
 }
-
-/*::selection {
-  background: var(--color-shallows);
-  color: black;
-}*/
 
 .glass-button-bg {
   background-image: var(--glass-gradient);
