@@ -185,8 +185,8 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="relative z-20 max-h-164 w-full max-w-5xl rounded-t-4xl border border-b-0 border-white/50 bg-white/30 p-3.5 pb-0 backdrop-blur-2xl">
-            <div className="flex items-center justify-center overflow-hidden rounded-t-3xl border border-white/5 bg-white">
+          <div className="relative z-20 max-h-164 w-full max-w-5xl rounded-t-4xl border border-b-0 border-white/60 bg-white/30 p-3.5 pb-0 backdrop-blur-2xl">
+            <div className="flex items-center justify-center overflow-hidden rounded-t-3xl border border-b-0 border-white/30 bg-white">
               <video
                 src="https://kmjffir9lpkjkv1u.public.blob.vercel-storage.com/sharkfin-demo-4"
                 autoPlay
