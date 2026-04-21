@@ -134,7 +134,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="page-container items-center gap-12">
+        <div className="page-container items-center gap-12 px-0 sm:px-6">
           <div className="relative z-20 flex flex-col items-center gap-8">
             <div className="flex flex-col items-center justify-center gap-8">
               <div className="flex size-24 items-center justify-center rounded-4xl shadow-xl">
@@ -185,8 +185,8 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="relative z-20 max-h-164 w-full max-w-5xl rounded-t-4xl border border-b-0 border-white/60 bg-white/30 p-3.5 pb-0 backdrop-blur-2xl">
-            <div className="flex items-center justify-center overflow-hidden rounded-t-3xl border border-b-0 border-white/30 bg-white">
+          <div className="relative z-20 max-h-164 w-full max-w-5xl rounded-t-4xl border-0 border-white/60 bg-white/30 sm:border sm:border-b-0 sm:p-3.5 sm:pb-0 sm:backdrop-blur-2xl">
+            <div className="flex items-center justify-center overflow-hidden rounded-t-3xl border border-x-0 border-b-0 border-white/30 bg-white sm:border-x">
               <video
                 src="https://kmjffir9lpkjkv1u.public.blob.vercel-storage.com/sharkfin-demo-4"
                 autoPlay
