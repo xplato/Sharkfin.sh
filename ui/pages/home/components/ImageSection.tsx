@@ -47,14 +47,15 @@ export default function ImageSection({
                 <h3 className="text-heading-3 leading-none font-bold">
                   {title}
                 </h3>
-                <h3
-                  className={cn(
-                    "text-heading-3 leading-none font-medium",
-                    variant === "light" && "text-foreground/50",
-                    variant === "dark" && "text-background/50",
-                  )}
-                >
-                  {subtitle}
+                <h3 className="text-heading-3 leading-none font-medium">
+                  <span
+                    className={cn(
+                      variant === "light" && "text-foreground/50",
+                      variant === "dark" && "text-background/35",
+                    )}
+                  >
+                    {subtitle}
+                  </span>
                 </h3>
               </div>
             </div>
