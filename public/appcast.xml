@@ -4,30 +4,14 @@
         <title>Sharkfin</title>
         <item>
             <title>1.0.0</title>
-            <pubDate>Tue, 21 Apr 2026 10:32:57 -0600</pubDate>
-            <sparkle:version>10</sparkle:version>
+            <pubDate>Tue, 21 Apr 2026 10:47:04 -0600</pubDate>
+            <sparkle:version>11</sparkle:version>
             <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/xplato/Sharkfin/releases/download/v1.0.0-10/Sharkfin-1.0.0-10.zip" length="26095126" type="application/octet-stream" sparkle:edSignature="4Lns46GIpNwqJlEkUOtJxriXXGH+nl/v8kUkwSmUrIrzkORN4duxJn8FJbqHHXrumJtIdQ/2NQfO6VBh0bdVBg=="/>
+            <enclosure url="https://github.com/yourname/Sharkfin/releases/download/v1.0.0-11/Sharkfin-1.0.0-11.zip" length="26095166" type="application/octet-stream" sparkle:edSignature="3ZGh6vh9YLNtgF7erTjLlYQbKV26b4hcUWjyN13YdrAt9t5dHBmH2ZBmOgjBMQd3HoR6ovzcQhjheEDzhDpbBA=="/>
             <sparkle:deltas>
-                <enclosure url="https://github.com/xplato/Sharkfin/releases/download/v1.0.0-10/Sharkfin10-8.delta" sparkle:deltaFrom="8" length="267154" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="mBQfUlGAUrAvNdkmC21YuZW1ig1owuQquTKHNrfFbvBMdy91A6KDg2IfH5YwHNM8YKa9nZsLotIApnZhB5rXAw=="/>
-            </sparkle:deltas>3
-        </item>
-        <item>
-            <title>1.0.0</title>
-            <pubDate>Tue, 21 Apr 2026 09:41:31 -0600</pubDate>
-            <sparkle:version>9</sparkle:version>
-            <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/xplato/Sharkfin/releases/download/v1.0.0-10/Sharkfin-1.0.0-9.zip" length="26095021" type="application/octet-stream" sparkle:edSignature="sz4Cbqob46s7nheRi1t0Lu/VB8l/RjaYeb1XGYJ3pHSnQGnRM4VufHMhqcWQ5E2YIjf+LX97BLtaMWJutpKlAw=="/>
-        </item>
-        <item>
-            <title>1.0.0</title>
-            <pubDate>Tue, 21 Apr 2026 09:52:13 -0600</pubDate>
-            <sparkle:version>8</sparkle:version>
-            <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/xplato/Sharkfin/releases/download/v1.0.0-10/Sharkfin%20Pro%201.0.0.dmg" length="25554063" type="application/octet-stream" sparkle:edSignature="wsRAF9AsrAZ5XFbDrbbg9bCCAmlsSOJr/27OB0a9YhNdqc9kqKYsVP1c4yTJTC+JEEul0LipY8kdkCbNgE+kDQ=="/>
+                <enclosure url="https://github.com/yourname/Sharkfin/releases/download/v1.0.0-11/Sharkfin11-9.delta" sparkle:deltaFrom="9" length="24282" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="hGTG0OcZjgigFIj4jFIPjUsa7SnDkZrC1TSZ4QQVLwJIkb8ixKdP26wgKNpXjBFAZFxdgBodGtUjOTh8qspeDA=="/>
+            </sparkle:deltas>
         </item>
     </channel>
 </rss>
