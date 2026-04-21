@@ -27,22 +27,32 @@ export default function HeroSection() {
             <div className="flex w-[max(76rem,200vw)] flex-row items-center justify-around">
               <div className="max-w-cloud">
                 <WithDecorativeGlassTooltip tooltipLabel="cloud-1.webp">
-                  <Image src={Cloud1Image} alt="Cloud" className="scale-90" />
+                  <Image
+                    src={Cloud1Image}
+                    alt="Cloud"
+                    loading="eager"
+                    className="scale-90"
+                  />
                 </WithDecorativeGlassTooltip>
               </div>
               <div className="max-w-cloud">
                 <WithDecorativeGlassTooltip tooltipLabel="cloud-2.webp">
-                  <Image src={Cloud2Image} alt="Cloud" />
+                  <Image src={Cloud2Image} alt="Cloud" loading="eager" />
                 </WithDecorativeGlassTooltip>
               </div>
               <div className="max-w-cloud scale-[-1_1]">
                 <WithDecorativeGlassTooltip tooltipLabel="cloud-1.webp">
-                  <Image src={Cloud1Image} alt="Cloud" className="scale-90" />
+                  <Image
+                    src={Cloud1Image}
+                    alt="Cloud"
+                    loading="eager"
+                    className="scale-90"
+                  />
                 </WithDecorativeGlassTooltip>
               </div>
               <div className="max-w-cloud scale-[-1_1]">
                 <WithDecorativeGlassTooltip tooltipLabel="cloud-2.webp">
-                  <Image src={Cloud2Image} alt="Cloud" />
+                  <Image src={Cloud2Image} alt="Cloud" loading="eager" />
                 </WithDecorativeGlassTooltip>
               </div>
             </div>
@@ -53,22 +63,26 @@ export default function HeroSection() {
           <div className="flex flex-row items-end gap-0">
             <div className="max-w-24">
               <WithDecorativeGlassTooltip tooltipLabel="balloon.webp">
-                <Image src={BalloonImage} alt="Pink Balloon" />
+                <Image src={BalloonImage} alt="Pink Balloon" loading="eager" />
               </WithDecorativeGlassTooltip>
             </div>
             <div className="max-w-48">
               <WithDecorativeGlassTooltip tooltipLabel="building-2.webp">
-                <Image src={Building2Image2} alt="Building" />
+                <Image src={Building2Image2} alt="Building" loading="eager" />
               </WithDecorativeGlassTooltip>
             </div>
             <div className="max-w-26">
               <WithDecorativeGlassTooltip tooltipLabel="house-2.webp">
-                <Image src={House2Image} alt="House" />
+                <Image src={House2Image} alt="House" loading="eager" />
               </WithDecorativeGlassTooltip>
             </div>
             <div className="ml-4 max-w-26">
               <WithDecorativeGlassTooltip tooltipLabel="wildlife-sign.webp">
-                <Image src={WildlifeSignImage} alt="Wildlife sign" />
+                <Image
+                  src={WildlifeSignImage}
+                  alt="Wildlife sign"
+                  loading="eager"
+                />
               </WithDecorativeGlassTooltip>
             </div>
           </div>
@@ -78,7 +92,11 @@ export default function HeroSection() {
                 tooltipLabel="pyramid.webp"
                 placement="top-left"
               >
-                <Image src={PyramidImage} alt="Pyramid of Giza" />
+                <Image
+                  src={PyramidImage}
+                  alt="Pyramid of Giza"
+                  loading="eager"
+                />
               </WithDecorativeGlassTooltip>
             </div>
             <div className="max-w-26">
@@ -86,7 +104,7 @@ export default function HeroSection() {
                 tooltipLabel="turbine.webp"
                 placement="top-left"
               >
-                <Image src={TurbineImage} alt="Wind Turbine" />
+                <Image src={TurbineImage} alt="Wind Turbine" loading="eager" />
               </WithDecorativeGlassTooltip>
             </div>
             <div className="max-w-28">
@@ -94,7 +112,7 @@ export default function HeroSection() {
                 tooltipLabel="lighthouse.webp"
                 placement="top-left"
               >
-                <Image src={LighthouseImage} alt="Lighthouse" />
+                <Image src={LighthouseImage} alt="Lighthouse" loading="eager" />
               </WithDecorativeGlassTooltip>
             </div>
             <div className="max-w-24">
@@ -102,7 +120,7 @@ export default function HeroSection() {
                 tooltipLabel="house-1.webp"
                 placement="top-left"
               >
-                <Image src={House1Image} alt="House" />
+                <Image src={House1Image} alt="House" loading="eager" />
               </WithDecorativeGlassTooltip>
             </div>
           </div>
@@ -111,7 +129,7 @@ export default function HeroSection() {
         <div className="absolute z-10 flex flex-row items-end justify-between px-8">
           <div className="max-w-32 sm:max-w-64 md:max-w-72">
             <WithDecorativeGlassTooltip tooltipLabel="leaf.webp">
-              <Image src={LeafImage} alt="Leaf" />
+              <Image src={LeafImage} alt="Leaf" loading="eager" />
             </WithDecorativeGlassTooltip>
           </div>
         </div>
@@ -121,7 +139,11 @@ export default function HeroSection() {
             <div className="flex flex-col items-center justify-center gap-8">
               <div className="flex size-24 items-center justify-center rounded-4xl shadow-xl">
                 <WithDecorativeGlassTooltip tooltipLabel="sharkfin-app-icon.webp">
-                  <Image src={SharkfinAppIcon} alt="Sharkfin App Icon" />
+                  <Image
+                    src={SharkfinAppIcon}
+                    alt="Sharkfin App Icon"
+                    loading="eager"
+                  />
                 </WithDecorativeGlassTooltip>
               </div>
 
@@ -164,7 +186,7 @@ export default function HeroSection() {
           </div>
 
           <div className="relative z-20 max-h-164 w-full max-w-5xl rounded-t-4xl border border-b-0 border-white/50 bg-white/30 p-3.5 pb-0 backdrop-blur-2xl">
-            <div className="flex items-center justify-center overflow-hidden rounded-t-3xl border border-white/30 bg-white">
+            <div className="flex items-center justify-center overflow-hidden rounded-t-3xl border border-white/5 bg-white">
               <video
                 src="https://kmjffir9lpkjkv1u.public.blob.vercel-storage.com/sharkfin-demo-4"
                 autoPlay
