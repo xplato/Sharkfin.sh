@@ -16,4 +16,6 @@
 
 Sharkfin is a native macOS app for semantic search of local files. This repository is the Next.js website for the project, located at [sharkfin.sh](https://sharkfin.sh).
 
+[**View Sharkfin repository**](https://github.com/xplato/Sharkfin)
+
 </div>
