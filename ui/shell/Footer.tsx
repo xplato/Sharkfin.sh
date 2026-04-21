@@ -26,13 +26,14 @@ export default function Footer() {
                 </h2>
               </div>
               <div className="flex flex-row items-center gap-3">
-                <GlassButton
+                {/* TODO: Uncomment once published */}
+                {/*<GlassButton
                   size="lg"
                   startIcon={
                     <Apple className="size-full invert dark:invert-0" />
                   }
                   label="Download"
-                />
+                />*/}
                 <GlassButton
                   as="a"
                   href="https://github.com/xplato/Sharkfin"

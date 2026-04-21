@@ -117,7 +117,7 @@ export default function Home() {
           alt: "Sharkfin searchbar showing results for 'pyramid' on a light cyan background",
           tooltipLabel: "relevance-3.webp",
         }}
-        description="Sharkfin leverages the latest CLIP models from OpenAI to gather relevant results from your images based on their content—all in milliseconds."
+        description="Sharkfin leverages the latest CLIP models from OpenAI to gather relevant results from your images based on their content—all in milliseconds on your device."
       />
     </WithPageTransition>
   );
