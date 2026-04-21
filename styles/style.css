@@ -86,6 +86,14 @@
     #ffffffd6 75%
   );
 
+  --glass-gradient-dark: linear-gradient(
+    180deg,
+    #ffffff1a,
+    #ffffff0a 25%,
+    #ffffff12 50%,
+    #ffffff1f 75%
+  );
+
   /* Typography */
   --clamp-heading: 4rem, 10rem;
   --font-size-heading: var(--clamp-heading);
@@ -99,9 +107,13 @@
   --font-size-heading-3: var(--clamp-heading-3);
   --text-heading-3: var(--clamp-heading-3);
 
-  --clamp-subheading: 1rem, 1.75rem;
+  --clamp-subheading: 1.25rem, 2rem;
   --font-size-subheading: var(--clamp-subheading);
   --text-subheading: var(--clamp-subheading);
+
+  /*--clamp-subheading-2: 1.25rem, 2rem;
+  --font-size-subheading-2: var(--clamp-subheading-2);
+  --text-subheading-2: var(--clamp-subheading-2);*/
 
   /* Home page */
   --clamp-cloud: 12rem, 28rem;
@@ -212,6 +224,54 @@ body {
   mask-composite: exclude;
   -webkit-mask-source-type: auto, auto;
   mask-mode: match-source, match-source;
+}
+
+@utility glass-button-bg-dark {
+  background-image: var(--glass-gradient-dark);
+  background-position: 50% 0;
+  background-size: 300% 300%;
+  transition: background-position 0.5s;
+  position: absolute;
+  inset: 0;
+}
+
+@utility glass-button-shadow-dark {
+  box-shadow:
+    0 12px 12px 2px var(--tw-shadow-color, #00000059),
+    0 2px 4px -1px var(--tw-shadow-color, #00000040);
+}
+
+@utility glass-border-dark {
+  &::before {
+    content: "";
+    border-radius: var(--radius-3xl);
+    pointer-events: none;
+    background: linear-gradient(#ffffff40 40%, #fff0 75% 95%, #ffffff40);
+    padding: 1px;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    inset: 0;
+    -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+    mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+    -webkit-mask-position:
+      0 0,
+      0 0;
+    mask-position:
+      0 0,
+      0 0;
+    -webkit-mask-size: auto, auto;
+    mask-size: auto, auto;
+    -webkit-mask-repeat: repeat, repeat;
+    mask-repeat: repeat, repeat;
+    -webkit-mask-clip: content-box, border-box;
+    mask-clip: content-box, border-box;
+    -webkit-mask-origin: content-box, border-box;
+    mask-origin: content-box, border-box;
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    -webkit-mask-source-type: auto, auto;
+    mask-mode: match-source, match-source;
+  }
 }
 
 /*

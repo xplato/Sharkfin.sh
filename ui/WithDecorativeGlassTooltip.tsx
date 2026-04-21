@@ -8,18 +8,24 @@ import {
 import gsap from "gsap";
 import { createPortal } from "react-dom";
 
+import { cn } from "@/lib/utils";
+
 type QuickTo = ReturnType<typeof gsap.quickTo>;
 
 type TooltipPlacement = "top-right" | "top-left";
+export type ColorMode = "light" | "dark";
 
 type WithDecorativeGlassTooltipProps = PropsWithChildren<{
   tooltipLabel: string;
   placement?: TooltipPlacement;
+  forceColorMode?: ColorMode;
 }>;
 
 // Offset so the tooltip sits above and slightly beside the cursor.
 const OFFSET_X = 16;
 const OFFSET_Y = -16;
+const HIDDEN_OPACITY = 1;
+const HIDDEN_SCALE = 0;
 
 const subscribe = () => () => {};
 const getClientSnapshot = () => true;
@@ -28,6 +34,7 @@ const getServerSnapshot = () => false;
 export default function WithDecorativeGlassTooltip({
   tooltipLabel,
   placement = "top-right",
+  forceColorMode,
   children,
 }: WithDecorativeGlassTooltipProps) {
   const tooltipRef = useRef<HTMLDivElement>(null);
@@ -47,7 +54,13 @@ export default function WithDecorativeGlassTooltip({
   useEffect(() => {
     const el = tooltipRef.current;
     if (!el) return;
-    gsap.set(el, { opacity: 0, scale: 0.85, x: 0, y: 0, xPercent });
+    gsap.set(el, {
+      opacity: HIDDEN_OPACITY,
+      scale: HIDDEN_SCALE,
+      x: 0,
+      y: 0,
+      xPercent,
+    });
   }, [mounted, xPercent]);
 
   const handleMouseEnter = useCallback(
@@ -95,8 +108,8 @@ export default function WithDecorativeGlassTooltip({
 
     gsap.killTweensOf(el, "opacity,scale");
     gsap.to(el, {
-      opacity: 0,
-      scale: 0.85,
+      opacity: HIDDEN_OPACITY,
+      scale: HIDDEN_SCALE,
       duration: 0.25,
       ease: "power2.in",
     });
@@ -118,11 +131,26 @@ export default function WithDecorativeGlassTooltip({
           <div
             ref={tooltipRef}
             aria-hidden
-            className="glass-button-shadow glass-border text-foreground pointer-events-none fixed top-0 left-0 isolate z-50 overflow-hidden rounded-3xl px-3.5 py-1 will-change-transform"
+            className={cn(
+              "pointer-events-none fixed top-0 left-0 isolate z-50 hidden overflow-hidden rounded-3xl px-3.5 py-1 will-change-transform sm:flex",
+              placement === "top-left" ? "origin-right" : "origin-left",
+              forceColorMode === "light" &&
+                "glass-button-shadow glass-border text-foreground",
+              forceColorMode === "dark" &&
+                "glass-button-shadow-dark glass-border-dark text-white",
+              forceColorMode === undefined &&
+                "glass-button-shadow glass-border text-foreground dark:glass-button-shadow-dark dark:glass-border-dark dark:text-white",
+            )}
           >
             <span
               aria-hidden
-              className="glass-button-bg -z-10 rounded-full backdrop-blur-sm"
+              className={cn(
+                "-z-10 rounded-full backdrop-blur-sm",
+                forceColorMode === "light" && "glass-button-bg",
+                forceColorMode === "dark" && "glass-button-bg-dark",
+                forceColorMode === undefined &&
+                  "glass-button-bg dark:glass-button-bg-dark",
+              )}
             />
             <p className="relative z-10 text-sm font-medium tracking-tight whitespace-nowrap select-none">
               {tooltipLabel}
