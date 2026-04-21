@@ -9,6 +9,9 @@ import Closeup1Image from "@/public/images/app/closeup-1.webp";
 import Closeup2Image from "@/public/images/app/closeup-2.webp";
 import Closeup1DarkImage from "@/public/images/app/closeup-dark-1.webp";
 import Closeup2DarkImage from "@/public/images/app/closeup-dark-2.webp";
+import RelevanceImage1 from "@/public/images/app/relevance-1.webp";
+import RelevanceImage2 from "@/public/images/app/relevance-2.webp";
+import RelevanceImage3 from "@/public/images/app/relevance-3.webp";
 import DarkSearchbarMediumImage from "@/public/images/app/searchbar-medium-dark.webp";
 import SearchbarMediumImage from "@/public/images/app/searchbar-medium.webp";
 
@@ -52,7 +55,7 @@ export default function Home() {
       <HeroSection />
       <FeatureSection />
       <ImageSection
-        title="Liquid Glass"
+        title="Liquid Glass,"
         subtitle="a look that's distinctly Mac"
         primaryImage={{
           src: SearchbarMediumImage,
@@ -95,6 +98,26 @@ export default function Home() {
         description="In dark mode, Sharkfin shifts to a subtle black glass, and the search bar takes on a metallic gray—so contrast stays sharp no matter the lighting."
         variant="dark"
         forceTooltipColorMode="dark"
+      />
+      <ImageSection
+        title="Surprisingly relevant."
+        subtitle="Search with natural language"
+        primaryImage={{
+          src: RelevanceImage1,
+          alt: "Sharkfin Searchbar over a light geometric background",
+          tooltipLabel: "relevance-1.webp",
+        }}
+        firstDualImage={{
+          src: RelevanceImage2,
+          alt: "Sharkfin searchbar showing results for 'ice cream cone' on a sandy textured background",
+          tooltipLabel: "relevance-2.webp",
+        }}
+        secondDualImage={{
+          src: RelevanceImage3,
+          alt: "Sharkfin searchbar showing results for 'pyramid' on a light cyan background",
+          tooltipLabel: "relevance-3.webp",
+        }}
+        description="Sharkfin leverages the latest CLIP models from OpenAI to gather relevant results from your images based on their content—all in milliseconds."
       />
     </WithPageTransition>
   );

@@ -35,23 +35,21 @@ export default function FeatureSection() {
   return (
     <section className="bg-background w-full pt-20 sm:pt-24 md:pt-32">
       <div className="page-container items-center">
-        <div className="flex w-full max-w-6xl flex-col items-start justify-start gap-24">
-          <div className="flex w-full items-center justify-center">
-            <div className="flex flex-row flex-wrap items-start justify-center gap-12">
-              {FEATURES.map((feature) => (
-                <div
-                  key={feature.label}
-                  className="flex flex-col items-center justify-center gap-6 text-center"
-                >
-                  <div className="flex size-12 items-center justify-center sm:size-16">
-                    {feature.icon}
-                  </div>
-                  <p className="max-w-42 text-xl leading-tight font-medium tracking-tight sm:text-2xl">
-                    {feature.label}
-                  </p>
+        <div className="flex w-full max-w-6xl flex-col items-center justify-center">
+          <div className="flex w-full flex-row flex-wrap items-start justify-center gap-12">
+            {FEATURES.map((feature) => (
+              <div
+                key={feature.label}
+                className="flex flex-col items-center justify-center gap-6 text-center"
+              >
+                <div className="flex size-12 items-center justify-center sm:size-16">
+                  {feature.icon}
                 </div>
-              ))}
-            </div>
+                <p className="max-w-42 text-xl leading-tight font-medium tracking-tight sm:text-2xl">
+                  {feature.label}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
