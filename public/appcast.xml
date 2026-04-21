@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Sharkfin</title>
+        <item>
+            <title>1.0.0</title>
+            <pubDate>Tue, 21 Apr 2026 09:41:31 -0600</pubDate>
+            <sparkle:version>9</sparkle:version>
+            <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/xplato/Sharkfin/releases/download/v1.0.0-9/Sharkfin-1.0.0-9.zip" length="26095021" type="application/octet-stream" sparkle:edSignature="sz4Cbqob46s7nheRi1t0Lu/VB8l/RjaYeb1XGYJ3pHSnQGnRM4VufHMhqcWQ5E2YIjf+LX97BLtaMWJutpKlAw=="/>
+        </item>
+    </channel>
+</rss>
