@@ -4,6 +4,14 @@
         <title>Sharkfin</title>
         <item>
             <title>1.0.0</title>
+            <pubDate>Tue, 21 Apr 2026 16:53:18 -0600</pubDate>
+            <sparkle:version>12</sparkle:version>
+            <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/xplato/Sharkfin/releases/download/v1.0.0-12/Sharkfin-1.0.0-12.zip" length="26095196" type="application/octet-stream" sparkle:edSignature="d4PRJl9lId+SQbbCdBOa6M65UnuP8vYR7PICfFezP8Re1p1hdDRg31Ia3UyTgEUc745FHUUt7ES2jqsIFVZjBg=="/>
+        </item>
+        <item>
+            <title>1.0.0</title>
             <pubDate>Tue, 21 Apr 2026 10:47:04 -0600</pubDate>
             <sparkle:version>11</sparkle:version>
             <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
