@@ -36,7 +36,7 @@ export default function Footer() {
                 />*/}
                 <GlassButton
                   as="a"
-                  href="https://github.com/xplato/Sharkfin"
+                  href="https://github.com/xplato/Sharkfin/releases"
                   target="_blank"
                   size="lg"
                   startIcon={

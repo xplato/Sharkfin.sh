@@ -147,7 +147,7 @@ export default function HeroSection() {
                 />*/}
                 <GlassButton
                   as="a"
-                  href="https://github.com/xplato/Sharkfin"
+                  href="https://github.com/xplato/Sharkfin/releases"
                   target="_blank"
                   size="lg"
                   startIcon={
@@ -158,7 +158,7 @@ export default function HeroSection() {
               </div>
 
               <p className="text-foreground/50 text-base tracking-tight">
-                Free and open source
+                Coming soon to the App Store
               </p>
             </div>
           </div>
