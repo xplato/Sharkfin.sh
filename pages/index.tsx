@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 import WithPageTransition from "@/ui/motion/transitions/WithPageTransition";
-import WideImageSection from "@/ui/pages/home/components/WideImageSection";
+import ImageSection from "@/ui/pages/home/components/ImageSection";
 import FeatureSection from "@/ui/pages/home/FeatureSection";
 import HeroSection from "@/ui/pages/home/HeroSection";
 
@@ -51,7 +51,7 @@ export default function Home() {
 
       <HeroSection />
       <FeatureSection />
-      <WideImageSection
+      <ImageSection
         title="Liquid Glass"
         subtitle="a look that's distinctly Mac"
         primaryImage={{
@@ -74,7 +74,7 @@ export default function Home() {
         what's behind it—while contrast keeps your content front and
         center."
       />
-      <WideImageSection
+      <ImageSection
         title="Where there's light..."
         subtitle="Sharkfin retreats to the shadows"
         primaryImage={{

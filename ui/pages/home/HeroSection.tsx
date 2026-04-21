@@ -109,7 +109,7 @@ export default function HeroSection() {
         </div>
 
         <div className="absolute z-10 flex flex-row items-end justify-between px-8">
-          <div className="max-w-72">
+          <div className="max-w-32 sm:max-w-64 md:max-w-72">
             <WithDecorativeGlassTooltip tooltipLabel="leaf.webp">
               <Image src={LeafImage} alt="Leaf" />
             </WithDecorativeGlassTooltip>

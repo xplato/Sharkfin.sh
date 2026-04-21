@@ -20,7 +20,7 @@ interface Props {
   forceTooltipColorMode?: ColorMode;
 }
 
-export default function WideImageSection({
+export default function ImageSection({
   title,
   subtitle,
   primaryImage,
