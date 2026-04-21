@@ -36,7 +36,7 @@ export default function FeatureSection() {
     <section className="bg-background w-full pt-20 sm:pt-24 md:pt-32">
       <div className="page-container items-center">
         <div className="flex w-full max-w-6xl flex-col items-center justify-center">
-          <div className="flex w-full flex-row flex-wrap items-start justify-center gap-12">
+          <div className="flex w-full flex-row flex-wrap items-start justify-center gap-8 sm:gap-12">
             {FEATURES.map((feature) => (
               <div
                 key={feature.label}

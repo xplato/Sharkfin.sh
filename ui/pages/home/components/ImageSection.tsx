@@ -42,8 +42,8 @@ export default function ImageSection({
         })}
       >
         <div className="page-container items-center">
-          <div className="flex w-full max-w-6xl flex-col items-start justify-start gap-16">
-            <div className="px-8">
+          <div className="flex w-full max-w-6xl flex-col items-start justify-start gap-10 sm:gap-12 md:gap-16">
+            <div className="px-4 sm:px-8">
               <div className="flex flex-col items-start justify-start gap-1">
                 <h3 className="text-heading-4 leading-none font-semibold">
                   <span>{title}</span>{" "}
@@ -100,7 +100,7 @@ export default function ImageSection({
               </div>
             </div>
 
-            <div className="px-8">
+            <div className="px-4 sm:px-8">
               <p className="text-subheading leading-snug font-medium">
                 {description}
               </p>
