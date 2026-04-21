@@ -113,9 +113,9 @@
   --font-size-subheading: var(--clamp-subheading);
   --text-subheading: var(--clamp-subheading);
 
-  /*--clamp-subheading-2: 1.25rem, 2rem;
+  --clamp-subheading-2: 1rem, 1.75rem;
   --font-size-subheading-2: var(--clamp-subheading-2);
-  --text-subheading-2: var(--clamp-subheading-2);*/
+  --text-subheading-2: var(--clamp-subheading-2);
 
   /* Home page */
   --clamp-cloud: 12rem, 28rem;

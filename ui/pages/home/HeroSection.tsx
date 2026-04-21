@@ -200,9 +200,11 @@ export default function HeroSection() {
                   as="h2"
                   variant="fadeUp"
                   delay={DELAY.subheading}
-                  className="text-foreground/75 text-subheading leading-none font-medium tracking-tight"
+                  className="text-subheading leading-none font-medium tracking-tight"
                 >
-                  A better way to find images on Mac
+                  <span className="text-foreground/75">
+                    A better way to find images on Mac
+                  </span>
                 </AnimateIn>
               </div>
             </div>
