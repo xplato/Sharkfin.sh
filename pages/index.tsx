@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import WithPageTransition from "@/ui/motion/transitions/WithPageTransition";
+import ImageGallerySection from "@/ui/pages/home/components/ImageGallerySection";
 import ImageSection from "@/ui/pages/home/components/ImageSection";
 import FeatureSection from "@/ui/pages/home/FeatureSection";
 import HeroSection from "@/ui/pages/home/HeroSection";
@@ -54,6 +55,7 @@ export default function Home() {
 
       <HeroSection />
       <FeatureSection />
+      <ImageGallerySection />
       <ImageSection
         title="Liquid Glass."
         subtitle="A look that's distinctly Mac."

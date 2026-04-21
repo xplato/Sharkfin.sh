@@ -1,16 +1,11 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 import WithDecorativeGlassTooltip, {
   ColorMode,
 } from "@/ui/WithDecorativeGlassTooltip";
 
+import { ImageType } from "@/lib/types";
 import { cn } from "@/lib/utils";
-
-interface ImageType {
-  src: StaticImageData;
-  alt: string;
-  tooltipLabel: string;
-}
 
 interface Props {
   title: string;
