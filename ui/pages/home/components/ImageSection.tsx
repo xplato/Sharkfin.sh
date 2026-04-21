@@ -36,7 +36,7 @@ export default function ImageSection({
   return (
     <section className="bg-background w-full p-4 pb-0! md:p-6">
       <div
-        className={cn("rounded-3xl py-20 sm:py-24 md:py-32", {
+        className={cn("rounded-3xl py-24 sm:py-32 md:py-40", {
           "text-background bg-linear-to-b from-neutral-800 to-neutral-900":
             variant === "dark",
         })}

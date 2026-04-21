@@ -33,7 +33,7 @@ const FEATURES = [
 
 export default function FeatureSection() {
   return (
-    <section className="bg-background w-full py-20 sm:py-24 md:py-32">
+    <section className="bg-background w-full pt-20 sm:pt-24 md:pt-32">
       <div className="page-container items-center">
         <div className="flex w-full max-w-6xl flex-col items-start justify-start gap-24">
           <div className="flex w-full items-center justify-center">
