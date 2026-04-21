@@ -8,9 +8,9 @@
             <sparkle:version>11</sparkle:version>
             <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/yourname/Sharkfin/releases/download/v1.0.0-11/Sharkfin-1.0.0-11.zip" length="26095166" type="application/octet-stream" sparkle:edSignature="3ZGh6vh9YLNtgF7erTjLlYQbKV26b4hcUWjyN13YdrAt9t5dHBmH2ZBmOgjBMQd3HoR6ovzcQhjheEDzhDpbBA=="/>
+            <enclosure url="https://github.com/xplato/Sharkfin/releases/download/v1.0.0-11/Sharkfin-1.0.0-11.zip" length="26095166" type="application/octet-stream" sparkle:edSignature="3ZGh6vh9YLNtgF7erTjLlYQbKV26b4hcUWjyN13YdrAt9t5dHBmH2ZBmOgjBMQd3HoR6ovzcQhjheEDzhDpbBA=="/>
             <sparkle:deltas>
-                <enclosure url="https://github.com/yourname/Sharkfin/releases/download/v1.0.0-11/Sharkfin11-9.delta" sparkle:deltaFrom="9" length="24282" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="hGTG0OcZjgigFIj4jFIPjUsa7SnDkZrC1TSZ4QQVLwJIkb8ixKdP26wgKNpXjBFAZFxdgBodGtUjOTh8qspeDA=="/>
+                <enclosure url="https://github.com/xplato/Sharkfin/releases/download/v1.0.0-11/Sharkfin11-9.delta" sparkle:deltaFrom="9" length="24282" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977840" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="hGTG0OcZjgigFIj4jFIPjUsa7SnDkZrC1TSZ4QQVLwJIkb8ixKdP26wgKNpXjBFAZFxdgBodGtUjOTh8qspeDA=="/>
             </sparkle:deltas>
         </item>
     </channel>
