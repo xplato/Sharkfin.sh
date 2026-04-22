@@ -22,7 +22,7 @@ const STEPS: ScrollLinkedStep[] = [
     },
     primaryText: "Download CLIP Models.",
     secondaryText:
-      "One-time download of your preferred CLIP model, then you're good to go.",
+      "One-time download of your preferred CLIP model, then you're good to go. Easily change models later.",
   },
   {
     icon: FolderPlusIcon,
@@ -32,7 +32,7 @@ const STEPS: ScrollLinkedStep[] = [
     },
     primaryText: "Add directories.",
     secondaryText:
-      "Images here become searchable after indexing—and are automatically re-indexed when you move things around.",
+      "Images in these folders become searchable after indexing—and are automatically re-indexed when you move things around.",
   },
   {
     icon: MagnifyingGlassIcon,
