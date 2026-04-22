@@ -160,7 +160,7 @@ const Slider = forwardRef<SliderHandle, SliderProps>(function Slider(
         aria-label={ariaLabel}
         onScroll={updateState}
         className={cn(
-          "no-scrollbar flex w-full list-none overflow-x-auto overscroll-x-contain",
+          "no-scrollbar flex w-full list-none overflow-x-auto overflow-y-hidden overscroll-x-contain",
           trackClassName,
         )}
         style={{
@@ -171,6 +171,7 @@ const Slider = forwardRef<SliderHandle, SliderProps>(function Slider(
           paddingRight: "var(--slider-offset)",
           gap: "var(--slider-gap)",
           margin: 0,
+          touchAction: "pan-x",
         }}
       >
         {items.map((child, idx) => (
@@ -227,11 +228,11 @@ function SliderControlButton({
       disabled={disabled}
       aria-label={direction === "prev" ? "Previous" : "Next"}
       className={cn(
-        "flex size-10 items-center justify-center rounded-full",
+        "flex size-10 cursor-pointer items-center justify-center rounded-full",
         "bg-foreground/5 text-foreground/70",
         "transition-[background-color,color,transform,opacity] duration-200",
         "hover:bg-foreground/10 hover:text-foreground active:scale-95",
-        "disabled:pointer-events-none disabled:opacity-30",
+        "disabled:pointer-events-none disabled:opacity-65",
         "focus-visible:ring-foreground/30 focus-visible:ring-2 focus-visible:outline-none",
       )}
     >

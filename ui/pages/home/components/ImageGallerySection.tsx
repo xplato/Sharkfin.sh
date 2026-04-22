@@ -25,7 +25,7 @@ export default function ImageGallerySection() {
         </div>
       </div>
 
-      <Slider ariaLabel="Sharkfin app gallery" className="flex flex-col gap-10">
+      <Slider ariaLabel="Sharkfin app gallery" className="flex flex-col gap-16">
         <GalleryItem
           image={{
             src: VintageChevyImage,
@@ -101,7 +101,7 @@ function GalleryItem({
 
       {primaryText && secondaryText && (
         <div className="w-full max-w-xl px-6">
-          <p className="text-body font-medium">
+          <p className="text-body leading-tight font-medium">
             <span>{primaryText}</span>{" "}
             <span className="text-foreground/45">{secondaryText}</span>
           </p>
