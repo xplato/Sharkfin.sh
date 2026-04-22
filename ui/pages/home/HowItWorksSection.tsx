@@ -3,15 +3,48 @@ import {
   CloudArrowDownIcon,
   FolderPlusIcon,
   MagnifyingGlassIcon,
-  type Icon,
 } from "@phosphor-icons/react";
 
-import WithDecorativeGlassTooltip from "@/ui/WithDecorativeGlassTooltip";
+import ScrollLinkedStepSection, {
+  type ScrollLinkedStep,
+} from "@/ui/ScrollLinkedStepSection";
 
-import { ImageType } from "@/lib/types";
-import { cn } from "@/lib/utils";
+import Step1Image from "@/public/images/app/step-1.webp";
+import Step2Image from "@/public/images/app/step-2.webp";
+import Step3Image from "@/public/images/app/step-3.webp";
 
-import Closeup1Image from "@/public/images/app/closeup-1.webp";
+const STEPS: ScrollLinkedStep[] = [
+  {
+    icon: CloudArrowDownIcon,
+    image: {
+      src: Step1Image,
+      alt: "Sharkfin's CLIP Model download screen",
+    },
+    primaryText: "Download CLIP Models.",
+    secondaryText:
+      "One-time download of your preferred CLIP model, then you're good to go.",
+  },
+  {
+    icon: FolderPlusIcon,
+    image: {
+      src: Step2Image,
+      alt: "Sharkfin's Add Directories screen",
+    },
+    primaryText: "Add directories.",
+    secondaryText:
+      "Images here become searchable after indexing—and are automatically re-indexed when you move things around.",
+  },
+  {
+    icon: MagnifyingGlassIcon,
+    image: {
+      src: Step3Image,
+      alt: "Sharkfin's Onboarding Completed screen",
+    },
+    primaryText: "Search.",
+    secondaryText:
+      "Customize and use the global shortcut to activate Sharkfin—then search for something awesome.",
+  },
+];
 
 export default function HowItWorksSection() {
   return (
@@ -26,83 +59,40 @@ export default function HowItWorksSection() {
             <span className="text-foreground/45">Search in three steps.</span>
           </h3>
 
-          <div className="flex w-full flex-col gap-16">
-            <Item
-              icon={CloudArrowDownIcon}
-              image={{
-                src: Closeup1Image,
-                alt: "",
-                tooltipLabel: "",
-              }}
-              primaryText="Download CLIP Models."
-              secondaryText="One-time download of your preferred CLIP model, then you're good to go."
-            />
-            <Item
-              icon={FolderPlusIcon}
-              image={{
-                src: Closeup1Image,
-                alt: "",
-                tooltipLabel: "",
-              }}
-              primaryText="Add directories."
-              secondaryText="Images here become searchable after indexing—and are automatically re-indexed when you move things around."
-              reverse
-            />
-            <Item
-              icon={MagnifyingGlassIcon}
-              image={{
-                src: Closeup1Image,
-                alt: "",
-                tooltipLabel: "",
-              }}
-              primaryText="Search."
-              secondaryText="Customize and use the global shortcut to activate Sharkfin—then search for something awesome."
-            />
+          <div className="hidden w-full lg:flex">
+            <ScrollLinkedStepSection steps={STEPS} />
+          </div>
+
+          <div className="flex w-full flex-col gap-16 lg:hidden">
+            {STEPS.map((step, i) => {
+              const IconComponent = step.icon;
+              return (
+                <div key={i} className="flex w-full flex-col items-start gap-6">
+                  <div className="flex flex-row items-start justify-start gap-4 px-6">
+                    <IconComponent
+                      className="size-6 shrink-0"
+                      weight="regular"
+                    />
+                    <p className="text-body leading-tight font-medium">
+                      <span>{step.primaryText}</span>{" "}
+                      <span className="text-foreground/45">
+                        {step.secondaryText}
+                      </span>
+                    </p>
+                  </div>
+                  <div className="relative h-128 w-full overflow-hidden rounded-3xl sm:h-124">
+                    <Image
+                      src={step.image.src}
+                      alt={step.image.alt}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
     </section>
-  );
-}
-
-function Item({
-  icon: IconComponent,
-  image,
-  primaryText,
-  secondaryText,
-  reverse,
-}: {
-  icon: Icon;
-  image: ImageType;
-  primaryText: string;
-  secondaryText: string;
-  reverse?: boolean;
-}) {
-  return (
-    <div className={cn("grid w-full grid-cols-2 gap-16", reverse && "")}>
-      <div
-        className={cn(
-          "flex flex-col items-start justify-center gap-6",
-          reverse && "order-2",
-        )}
-      >
-        <IconComponent className="size-8" weight="regular" />
-        <p className="text-body max-w-sm leading-tight font-medium">
-          <span>{primaryText}</span>{" "}
-          <span className="text-foreground/45">{secondaryText}</span>
-        </p>
-      </div>
-
-      <div
-        className={cn(
-          "h-124 w-full overflow-hidden rounded-3xl",
-          reverse && "order-1",
-        )}
-      >
-        <WithDecorativeGlassTooltip tooltipLabel={image.tooltipLabel}>
-          <Image src={image.src} alt={image.alt} />
-        </WithDecorativeGlassTooltip>
-      </div>
-    </div>
   );
 }
