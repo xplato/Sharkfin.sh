@@ -7,7 +7,7 @@ import TextLink from "../TextLink";
 import WithDecorativeGlassTooltip from "../WithDecorativeGlassTooltip";
 
 import SharkfinAppIcon from "@/public/brand/sharkfin-beach.webp";
-import LandscapeImage from "@/public/images/sand-dune.webp";
+import SandDuneImage from "@/public/images/sand-dune.webp";
 
 const FOOTER_COLUMNS: Array<{
   label: string;
@@ -154,8 +154,8 @@ export default function Footer() {
 
           <div className="mt-8 flex max-h-124 w-full items-start justify-start">
             <Image
-              src={LandscapeImage}
-              alt="Landscape"
+              src={SandDuneImage}
+              alt="Sand dune"
               className="pointer-events-none opacity-0"
             />
           </div>
@@ -164,7 +164,7 @@ export default function Footer() {
 
       <div className="absolute right-0 bottom-0 left-0 max-h-124 w-full overflow-hidden">
         <WithDecorativeGlassTooltip tooltipLabel="sand-dune.webp">
-          <Image src={LandscapeImage} alt="Sand dune" />
+          <Image src={SandDuneImage} alt="Sand dune" />
         </WithDecorativeGlassTooltip>
       </div>
     </footer>
