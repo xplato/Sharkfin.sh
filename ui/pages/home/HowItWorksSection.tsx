@@ -50,13 +50,12 @@ export default function HowItWorksSection() {
   return (
     <section
       id="how-it-works"
-      className="bg-background flex w-full flex-col items-start gap-12 py-28 sm:gap-16 sm:py-32 md:py-40"
+      className="bg-background flex w-full flex-col items-start gap-12 pt-28 sm:gap-16 sm:pt-32 md:pt-40"
     >
       <div className="page-container items-center">
         <div className="flex w-full max-w-6xl flex-col items-start justify-start gap-16">
           <h3 className="text-heading-4 leading-none font-semibold">
-            <span>How it works.</span>{" "}
-            <span className="text-foreground/45">Search in three steps.</span>
+            <span>How it works.</span>
           </h3>
 
           <div className="hidden w-full lg:flex">
