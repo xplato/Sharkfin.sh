@@ -30,7 +30,8 @@ const FAQS: Faq[] = [
         <FaqText>
           In all seriousness, there&apos;s no catch. Sharkfin is free and open
           source. If you like it, however, it&apos;d mean a lot if you shared it
-          with your peeps. (Just don&apos;t tell Biff.)
+          with your peeps. (Just don&apos;t tell Biff—or the{" "}
+          <span className="italic">other</span> Biff.)
         </FaqText>
       </>
     ),
