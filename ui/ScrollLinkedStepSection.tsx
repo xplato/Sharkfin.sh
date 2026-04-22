@@ -89,7 +89,7 @@ export default function ScrollLinkedStepSection({ steps }: Props) {
 
       <div>
         <div className="sticky top-1/2 mt-[23vh] -translate-y-1/2">
-          <div className="relative h-136 w-full overflow-hidden rounded-3xl">
+          <div className="relative h-136 w-full overflow-hidden rounded-3xl shadow-lg">
             {steps.map((step, i) => (
               <div
                 key={i}
