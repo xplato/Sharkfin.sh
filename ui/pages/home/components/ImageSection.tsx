@@ -1,16 +1,11 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 import WithDecorativeGlassTooltip, {
   ColorMode,
 } from "@/ui/WithDecorativeGlassTooltip";
 
+import { ImageType } from "@/lib/types";
 import { cn } from "@/lib/utils";
-
-interface ImageType {
-  src: StaticImageData;
-  alt: string;
-  tooltipLabel: string;
-}
 
 interface Props {
   title: string;
@@ -59,7 +54,7 @@ export default function ImageSection({
               </div>
             </div>
 
-            <div className="flex w-full flex-col gap-4 sm:gap-6 md:gap-8">
+            <div className="flex w-full flex-col gap-5">
               <div className="max-h-164 w-full overflow-hidden rounded-3xl">
                 <WithDecorativeGlassTooltip
                   tooltipLabel={primaryImage.tooltipLabel}
@@ -68,7 +63,7 @@ export default function ImageSection({
                   <Image src={primaryImage.src} alt={primaryImage.alt} />
                 </WithDecorativeGlassTooltip>
               </div>
-              <div className="grid w-full grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 md:gap-8">
+              <div className="grid w-full grid-cols-1 gap-5 md:grid-cols-2">
                 <div>
                   <div className="overflow-hidden rounded-3xl">
                     <WithDecorativeGlassTooltip

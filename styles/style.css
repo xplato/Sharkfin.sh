@@ -117,6 +117,10 @@
   --font-size-subheading-2: var(--clamp-subheading-2);
   --text-subheading-2: var(--clamp-subheading-2);
 
+  --clamp-body: 1rem, 1.25rem;
+  --font-size-body: var(--clamp-body);
+  --text-body: var(--clamp-body);
+
   /* Home page */
   --clamp-cloud: 12rem, 28rem;
   --spacing-cloud: var(--clamp-cloud);
@@ -164,6 +168,15 @@ body {
 
 @utility inset-container-right {
   right: max(var(--gutter), calc((100vw - 2560px) / 2 + var(--gutter)));
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @layer base {
