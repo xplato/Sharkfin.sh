@@ -11,15 +11,30 @@ import gsap from "gsap";
 import { cn } from "@/lib/utils";
 
 const glassButtonVariants = cva({
-  base: "group relative isolate cursor-pointer overflow-hidden rounded-3xl text-foreground glass-button-shadow glass-border focus:outline-none",
+  base: "group relative isolate cursor-pointer overflow-hidden rounded-3xl focus:outline-none",
   variants: {
     size: {
       sm: "pl-3 pr-3.5 py-1",
       md: "pl-4 pr-5 py-2",
       lg: "pl-5 pr-6 py-2.5",
     },
+    colorMode: {
+      light: "text-foreground glass-button-shadow glass-border",
+      dark: "text-white glass-button-shadow-dark glass-border-dark",
+    },
   },
-  defaultVariants: { size: "lg" },
+  defaultVariants: { size: "lg", colorMode: "light" },
+});
+
+const glassButtonBgVariants = cva({
+  base: "-z-10 rounded-full backdrop-blur-sm group-hover:bg-position-[50%_100%]",
+  variants: {
+    colorMode: {
+      light: "glass-button-bg",
+      dark: "glass-button-bg-dark",
+    },
+  },
+  defaultVariants: { colorMode: "light" },
 });
 
 const contentGapVariants = cva({
@@ -78,6 +93,7 @@ function GlassButton<T extends ElementType = "button">({
   label,
   endIcon,
   size = "md",
+  colorMode = "light",
   children,
   ...props
 }: GlassButtonProps<T>) {
@@ -116,12 +132,12 @@ function GlassButton<T extends ElementType = "button">({
       onClick: handleClick,
       onMouseEnter: handleMouseEnter,
       onMouseLeave: handleMouseLeave,
-      className: cn(glassButtonVariants({ size }), className),
+      className: cn(glassButtonVariants({ size, colorMode }), className),
     },
     <>
       <span
         aria-hidden
-        className="glass-button-bg -z-10 rounded-full backdrop-blur-sm group-hover:bg-position-[50%_100%]"
+        className={glassButtonBgVariants({ colorMode })}
       />
       {children ?? (
         <div className={contentGapVariants({ size })}>

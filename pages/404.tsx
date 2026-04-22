@@ -55,7 +55,7 @@ export default function FourOhFour() {
                 href="/"
                 startIcon={<ArrowUpIcon weight="bold" />}
                 label="Return to the surface"
-                className="text-white"
+                colorMode="dark"
               />
             </div>
           </div>
