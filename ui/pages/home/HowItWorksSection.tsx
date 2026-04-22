@@ -67,7 +67,7 @@ export default function HowItWorksSection() {
               const IconComponent = step.icon;
               return (
                 <div key={i} className="flex w-full flex-col items-start gap-6">
-                  <div className="flex flex-row items-start justify-start gap-4 px-6">
+                  <div className="flex flex-row items-start justify-start gap-4">
                     <IconComponent
                       className="size-6 shrink-0"
                       weight="regular"
