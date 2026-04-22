@@ -98,26 +98,6 @@ export default function Home() {
         variant="dark"
         forceTooltipColorMode="dark"
       />
-      {/*<ImageSection
-        title="Surprisingly relevant."
-        subtitle="Search with natural language."
-        primaryImage={{
-          src: RelevanceImage1,
-          alt: "Sharkfin Searchbar over a light geometric background",
-          tooltipLabel: "relevance-1.webp",
-        }}
-        firstDualImage={{
-          src: RelevanceImage2,
-          alt: "Sharkfin searchbar showing results for 'ice cream cone' on a sandy textured background",
-          tooltipLabel: "relevance-2.webp",
-        }}
-        secondDualImage={{
-          src: RelevanceImage3,
-          alt: "Sharkfin searchbar showing results for 'pyramid' on a light cyan background",
-          tooltipLabel: "relevance-3.webp",
-        }}
-        description="Sharkfin leverages the latest CLIP models from OpenAI to gather relevant results from your images based on their content—all in milliseconds on your device."
-      />*/}
     </WithPageTransition>
   );
 }
