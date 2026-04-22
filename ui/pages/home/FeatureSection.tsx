@@ -6,8 +6,6 @@ import {
   LightningIcon,
 } from "@phosphor-icons/react";
 
-import GradientText from "@/ui/GradientText";
-
 const FEATURES = [
   {
     icon: <GiftIcon weight="light" className="size-full" />,
