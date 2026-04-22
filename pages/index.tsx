@@ -1,6 +1,5 @@
 import Head from "next/head";
 
-import WithPageTransition from "@/ui/motion/transitions/WithPageTransition";
 import ImageGallerySection from "@/ui/pages/home/components/ImageGallerySection";
 import ImageSection from "@/ui/pages/home/components/ImageSection";
 import FeatureSection from "@/ui/pages/home/FeatureSection";
@@ -15,7 +14,7 @@ import SearchbarMediumImage from "@/public/images/app/searchbar-medium.webp";
 
 export default function Home() {
   return (
-    <WithPageTransition>
+    <>
       <Head>
         <title>Sharkfin — A better way to find images on Mac</title>
         <meta
@@ -98,6 +97,6 @@ export default function Home() {
         variant="dark"
         forceTooltipColorMode="dark"
       />
-    </WithPageTransition>
+    </>
   );
 }

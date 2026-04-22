@@ -18,13 +18,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
       <div className={fontClassNames}>
         <Navigation />
 
-        <LayoutGroup>
-          <AnimatePresence mode="wait">
-            <motion.div key={router.asPath}>
-              <Component {...pageProps} />
-            </motion.div>
-          </AnimatePresence>
-        </LayoutGroup>
+        <Component {...pageProps} />
 
         <Footer />
 

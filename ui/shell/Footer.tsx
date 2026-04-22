@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { HeartIcon } from "@phosphor-icons/react";
 import { Apple, Github } from "@thesvg/react";
 
@@ -44,6 +45,10 @@ const FOOTER_COLUMNS: Array<{
         label: "Privacy",
         href: "/privacy",
       },
+      {
+        label: "Contact",
+        href: "mailto:hi@sharkfin.sh",
+      },
     ],
   },
   {
@@ -62,11 +67,14 @@ export default function Footer() {
     <footer className="bg-background relative w-full">
       <div className="p-4 sm:p-6">
         <div className="flex w-full flex-col gap-6 overflow-hidden rounded-3xl bg-[#E8D2BC] px-8 pt-12 sm:gap-12 sm:px-12">
-          <div className="flex size-12 items-center justify-center rounded-4xl shadow-xl sm:size-16">
+          <Link
+            href="/"
+            className="flex size-12 items-center justify-center rounded-4xl shadow-xl sm:size-16"
+          >
             <WithDecorativeGlassTooltip tooltipLabel="sharkfin-beach.webp">
               <Image src={SharkfinAppIcon} alt="Sharkfin App Icon" />
             </WithDecorativeGlassTooltip>
-          </div>
+          </Link>
 
           <div className="grid w-full grid-cols-1 gap-16 lg:grid-cols-2">
             <div className="flex w-full flex-col gap-10">
