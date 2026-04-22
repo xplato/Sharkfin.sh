@@ -43,7 +43,7 @@ export default function PrivacyLayout({ active, children }: Props) {
   return (
     <>
       <section className="bg-background w-full p-4 pb-0 sm:p-6">
-        <div className="from-shallows to-spray relative overflow-hidden rounded-3xl bg-linear-to-b px-6 pt-20 pb-16 shadow-[0px_4px_16px_rgba(0,0,0,0.05)] sm:px-8 sm:pt-24 sm:pb-20 md:pt-32 md:pb-24">
+        <div className="from-shallows to-spray relative overflow-hidden rounded-3xl bg-linear-to-b px-1 pt-20 pb-8 shadow-[0px_4px_16px_rgba(0,0,0,0.05)] sm:pt-24 sm:pb-20 md:pt-32 md:pb-24">
           <div className="page-container items-center">
             <div className="flex w-full max-w-3xl flex-col items-start justify-start gap-10">
               <GlassButton
