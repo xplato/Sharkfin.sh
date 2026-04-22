@@ -10,9 +10,6 @@ import Closeup1Image from "@/public/images/app/closeup-1.webp";
 import Closeup2Image from "@/public/images/app/closeup-2.webp";
 import Closeup1DarkImage from "@/public/images/app/closeup-dark-1.webp";
 import Closeup2DarkImage from "@/public/images/app/closeup-dark-2.webp";
-import RelevanceImage1 from "@/public/images/app/relevance-1.webp";
-import RelevanceImage2 from "@/public/images/app/relevance-2.webp";
-import RelevanceImage3 from "@/public/images/app/relevance-3.webp";
 import DarkSearchbarMediumImage from "@/public/images/app/searchbar-medium-dark.webp";
 import SearchbarMediumImage from "@/public/images/app/searchbar-medium.webp";
 
@@ -101,7 +98,7 @@ export default function Home() {
         variant="dark"
         forceTooltipColorMode="dark"
       />
-      <ImageSection
+      {/*<ImageSection
         title="Surprisingly relevant."
         subtitle="Search with natural language."
         primaryImage={{
@@ -120,7 +117,7 @@ export default function Home() {
           tooltipLabel: "relevance-3.webp",
         }}
         description="Sharkfin leverages the latest CLIP models from OpenAI to gather relevant results from your images based on their content—all in milliseconds on your device."
-      />
+      />*/}
     </WithPageTransition>
   );
 }

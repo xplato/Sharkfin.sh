@@ -4,57 +4,56 @@ import Slider from "@/ui/Slider";
 import WithDecorativeGlassTooltip from "@/ui/WithDecorativeGlassTooltip";
 
 import { ImageType } from "@/lib/types";
+import { cn } from "@/lib/utils";
 
-import GalleryImage1 from "@/public/images/app/closeup-1.webp";
-import GalleryImage2 from "@/public/images/app/closeup-2.webp";
-import GalleryImage3 from "@/public/images/app/closeup-dark-1.webp";
-import GalleryImage4 from "@/public/images/app/closeup-dark-2.webp";
+import RelevanceImage3 from "@/public/images/app/tiger-in-pool.webp";
+import RelevanceImage4 from "@/public/images/app/vintage-chevy.webp";
+import RelevanceImage2 from "@/public/images/app/woman-as-flamingo.webp";
 
 export default function ImageGallerySection() {
   return (
     <section className="bg-background flex w-full flex-col items-start gap-16 py-24 sm:py-32 md:py-40">
       <div className="page-container items-center">
         <div className="w-full max-w-6xl">
-          <h3 className="text-heading-4 font-semibold">Sharkfin</h3>
+          <h3 className="text-heading-4 leading-none font-semibold">
+            <span>Surprisingly relevant.</span>{" "}
+            <span className="text-foreground/45">
+              Search with natural language.
+            </span>
+          </h3>
         </div>
       </div>
 
       <Slider ariaLabel="Sharkfin app gallery" className="flex flex-col gap-10">
         <GalleryItem
           image={{
-            src: GalleryImage1,
-            alt: "",
-            tooltipLabel: "",
+            src: RelevanceImage4,
+            alt: "Sharkfin searchbar showing results for the search term 'vintage chevy'",
+            tooltipLabel: "vintage-chevy.webp",
           }}
           primaryText="Crazy fast."
           secondaryText="Seriously"
+          className="max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-3xl"
         />
         <GalleryItem
           image={{
-            src: GalleryImage2,
-            alt: "",
-            tooltipLabel: "",
+            src: RelevanceImage2,
+            alt: "Sharkfin searchbar showing results for the search term 'woman as flamingo'",
+            tooltipLabel: "woman-as-flamingo.webp",
           }}
           primaryText="Crazy fast."
           secondaryText="Seriously"
+          className="max-w-sm sm:max-w-md md:max-w-xl"
         />
         <GalleryItem
           image={{
-            src: GalleryImage3,
-            alt: "",
-            tooltipLabel: "",
+            src: RelevanceImage3,
+            alt: "Sharkfin searchbar showing results for the search term 'tiger in pool'",
+            tooltipLabel: "tiger-in-pool.webp",
           }}
           primaryText="Crazy fast."
           secondaryText="Seriously"
-        />
-        <GalleryItem
-          image={{
-            src: GalleryImage4,
-            alt: "",
-            tooltipLabel: "",
-          }}
-          primaryText="Crazy fast."
-          secondaryText="Seriously"
+          className="max-w-sm sm:max-w-md md:max-w-xl"
         />
       </Slider>
     </section>
@@ -65,14 +64,18 @@ function GalleryItem({
   image,
   primaryText,
   secondaryText,
+  className,
 }: {
   image: ImageType;
   primaryText: string;
   secondaryText: string;
+  className: string;
 }) {
   return (
-    <div className="flex max-w-xl flex-col items-start justify-start gap-8">
-      <div className="max-h-128 w-full overflow-hidden rounded-3xl">
+    <div
+      className={cn("flex flex-col items-start justify-start gap-8", className)}
+    >
+      <div className="h-64 w-full overflow-hidden rounded-3xl sm:h-80 md:h-96 lg:h-128">
         <WithDecorativeGlassTooltip tooltipLabel={image.tooltipLabel}>
           <Image src={image.src} alt={image.alt} />
         </WithDecorativeGlassTooltip>
