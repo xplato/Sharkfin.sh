@@ -6,7 +6,8 @@ import WithDecorativeGlassTooltip from "@/ui/WithDecorativeGlassTooltip";
 import { ImageType } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
-import CherryBlossomImage from "@/public/images/app/cherry-blossom.webp";
+import ContextMenuImage from "@/public/images/app/context-menu.webp";
+import ImageDetailImage from "@/public/images/app/image-detail.webp";
 import PngFilterImage from "@/public/images/app/png-filter.webp";
 import SettingsImage from "@/public/images/app/settings.webp";
 import VintageChevyImage from "@/public/images/app/vintage-chevy.webp";
@@ -48,12 +49,22 @@ export default function ImageGallerySection() {
         />
         <GalleryItem
           image={{
-            src: CherryBlossomImage,
+            src: ImageDetailImage,
             alt: "Sharkfin searchbar showing the detail view for the search term 'zucchini'",
-            tooltipLabel: "cherry-blossom.webp",
+            tooltipLabel: "image-detail.webp",
           }}
           primaryText="View file metadata."
           secondaryText="Everything you need to know, right where you need it."
+          className="max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-3xl"
+        />
+        <GalleryItem
+          image={{
+            src: ContextMenuImage,
+            alt: "Sharkfin searchbar results for the search term 'isometric' with the search result item context menu open",
+            tooltipLabel: "context-menu.webp",
+          }}
+          primaryText="Quick actions at your fingertips."
+          secondaryText="Open, reveal, copy, and more—right from the searchbar."
           className="max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-3xl"
         />
         <GalleryItem
