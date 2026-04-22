@@ -19,7 +19,7 @@ const FEATURES = [
   },
   {
     icon: <LightningIcon weight="light" className="size-full" />,
-    label: "Crazy fast, seriously",
+    label: "Crazy fast (seriously)",
   },
   {
     icon: <HandPeaceIcon weight="light" className="size-full" />,
