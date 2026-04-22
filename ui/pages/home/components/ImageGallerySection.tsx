@@ -13,7 +13,7 @@ import VintageChevyImage from "@/public/images/app/vintage-chevy.webp";
 
 export default function ImageGallerySection() {
   return (
-    <section className="bg-background flex w-full flex-col items-start gap-12 py-28 sm:gap-16 sm:py-32 md:py-40">
+    <section className="bg-background flex w-full flex-col items-start gap-12 pt-28 sm:gap-16 sm:pt-32 md:pt-40">
       <div className="page-container items-center">
         <div className="w-full max-w-6xl">
           <h3 className="text-heading-4 leading-none font-semibold">
