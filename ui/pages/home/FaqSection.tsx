@@ -213,12 +213,9 @@ function PlusMinusIcon({ isOpen }: { isOpen: boolean }) {
     >
       <span className="bg-foreground absolute h-[1.5px] w-full rounded-full" />
       <motion.span
-        className="bg-foreground absolute h-[1.5px] w-full rounded-full"
+        className="bg-foreground absolute h-full w-[1.5px] rounded-full"
         initial={false}
-        animate={{
-          rotate: isOpen ? 0 : 90,
-          opacity: isOpen ? 0 : 1,
-        }}
+        animate={{ scaleY: isOpen ? 0 : 1 }}
         transition={{ duration: 0.35, ease: easeSnapToSilk }}
       />
     </span>
