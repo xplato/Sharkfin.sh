@@ -21,7 +21,7 @@ const FAQS: Faq[] = [
     answer: (
       <>
         <div className="flex w-full">
-          <div className="overflow-hidden rounded-2xl">
+          <div className="overflow-hidden rounded-2xl shadow-lg">
             <Image
               src={NoCatchGif}
               alt="Biff from Back to the Future saying 'no catch, just keep it a secret'"
