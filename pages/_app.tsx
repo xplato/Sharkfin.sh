@@ -1,4 +1,5 @@
 import type { AppProps } from "next/app";
+import { Analytics } from "@vercel/analytics/next";
 import { AnimatePresence, LayoutGroup, motion } from "motion/react";
 
 import { fontClassNames } from "@/lib/fonts";
@@ -29,6 +30,8 @@ export default function App({ Component, pageProps, router }: AppProps) {
 
         <BlurStrip position="bottom" />
       </div>
+
+      <Analytics />
     </SoundProvider>
   );
 }
