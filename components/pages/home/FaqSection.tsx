@@ -25,6 +25,7 @@ const FAQS: Faq[] = [
             <Image
               src={NoCatchGif}
               alt="Biff from Back to the Future saying 'no catch, just keep it a secret'"
+              loading="lazy"
             />
           </div>
         </div>

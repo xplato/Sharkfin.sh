@@ -51,13 +51,19 @@ export default function HeroSection() {
                       src={Cloud1Image}
                       alt="Cloud"
                       loading="eager"
+                      fetchPriority="high"
                       className="scale-90"
                     />
                   </WithDecorativeGlassTooltip>
                 </div>
                 <div className="max-w-cloud">
                   <WithDecorativeGlassTooltip tooltipLabel="cloud-2.webp">
-                    <Image src={Cloud2Image} alt="Cloud" loading="eager" />
+                    <Image
+                      src={Cloud2Image}
+                      alt="Cloud"
+                      loading="eager"
+                      fetchPriority="high"
+                    />
                   </WithDecorativeGlassTooltip>
                 </div>
                 <div className="max-w-cloud scale-[-1_1]">
@@ -66,13 +72,19 @@ export default function HeroSection() {
                       src={Cloud1Image}
                       alt="Cloud"
                       loading="eager"
+                      fetchPriority="high"
                       className="scale-90"
                     />
                   </WithDecorativeGlassTooltip>
                 </div>
                 <div className="max-w-cloud scale-[-1_1]">
                   <WithDecorativeGlassTooltip tooltipLabel="cloud-2.webp">
-                    <Image src={Cloud2Image} alt="Cloud" loading="eager" />
+                    <Image
+                      src={Cloud2Image}
+                      alt="Cloud"
+                      loading="eager"
+                      fetchPriority="high"
+                    />
                   </WithDecorativeGlassTooltip>
                 </div>
               </div>
@@ -89,17 +101,32 @@ export default function HeroSection() {
           >
             <div className="max-w-24">
               <WithDecorativeGlassTooltip tooltipLabel="balloon.webp">
-                <Image src={BalloonImage} alt="Pink Balloon" loading="eager" />
+                <Image
+                  src={BalloonImage}
+                  alt="Pink Balloon"
+                  loading="eager"
+                  fetchPriority="high"
+                />
               </WithDecorativeGlassTooltip>
             </div>
             <div className="max-w-48">
               <WithDecorativeGlassTooltip tooltipLabel="building-2.webp">
-                <Image src={Building2Image2} alt="Building" loading="eager" />
+                <Image
+                  src={Building2Image2}
+                  alt="Building"
+                  loading="eager"
+                  fetchPriority="high"
+                />
               </WithDecorativeGlassTooltip>
             </div>
             <div className="max-w-26">
               <WithDecorativeGlassTooltip tooltipLabel="house-2.webp">
-                <Image src={House2Image} alt="House" loading="eager" />
+                <Image
+                  src={House2Image}
+                  alt="House"
+                  loading="eager"
+                  fetchPriority="high"
+                />
               </WithDecorativeGlassTooltip>
             </div>
             <div className="ml-4 max-w-26">
@@ -108,6 +135,7 @@ export default function HeroSection() {
                   src={WildlifeSignImage}
                   alt="Wildlife sign"
                   loading="eager"
+                  fetchPriority="high"
                 />
               </WithDecorativeGlassTooltip>
             </div>
@@ -127,6 +155,7 @@ export default function HeroSection() {
                   src={PyramidImage}
                   alt="Pyramid of Giza"
                   loading="eager"
+                  fetchPriority="high"
                 />
               </WithDecorativeGlassTooltip>
             </div>
@@ -135,7 +164,12 @@ export default function HeroSection() {
                 tooltipLabel="turbine.webp"
                 placement="top-left"
               >
-                <Image src={TurbineImage} alt="Wind Turbine" loading="eager" />
+                <Image
+                  src={TurbineImage}
+                  alt="Wind Turbine"
+                  loading="eager"
+                  fetchPriority="high"
+                />
               </WithDecorativeGlassTooltip>
             </div>
             <div className="max-w-28">
@@ -143,7 +177,12 @@ export default function HeroSection() {
                 tooltipLabel="lighthouse.webp"
                 placement="top-left"
               >
-                <Image src={LighthouseImage} alt="Lighthouse" loading="eager" />
+                <Image
+                  src={LighthouseImage}
+                  alt="Lighthouse"
+                  loading="eager"
+                  fetchPriority="high"
+                />
               </WithDecorativeGlassTooltip>
             </div>
             <div className="max-w-24">
@@ -151,7 +190,12 @@ export default function HeroSection() {
                 tooltipLabel="house-1.webp"
                 placement="top-left"
               >
-                <Image src={House1Image} alt="House" loading="eager" />
+                <Image
+                  src={House1Image}
+                  alt="House"
+                  loading="eager"
+                  fetchPriority="high"
+                />
               </WithDecorativeGlassTooltip>
             </div>
           </AnimateIn>
@@ -164,7 +208,12 @@ export default function HeroSection() {
         >
           <div className="max-w-32 sm:max-w-64 md:max-w-72">
             <WithDecorativeGlassTooltip tooltipLabel="leaf.webp">
-              <Image src={LeafImage} alt="Leaf" loading="eager" />
+              <Image
+                src={LeafImage}
+                alt="Leaf"
+                loading="eager"
+                fetchPriority="high"
+              />
             </WithDecorativeGlassTooltip>
           </div>
         </AnimateIn>
@@ -182,6 +231,7 @@ export default function HeroSection() {
                     src={SharkfinAppIcon}
                     alt="Sharkfin App Icon"
                     loading="eager"
+                    fetchPriority="high"
                   />
                 </WithDecorativeGlassTooltip>
               </AnimateIn>
