@@ -1,11 +1,17 @@
 import PrivacyLayout, {
   FeatureTag,
 } from "@/components/pages/privacy/PrivacyLayout";
+import PageHead from "@/components/shell/PageHead";
 import TextLink from "@/components/TextLink";
 
 export default function PrivacyApp() {
   return (
     <PrivacyLayout active="app">
+      <PageHead
+        title="Sharkfin — Privacy"
+        description="Sharkfin runs entirely on your device. No ads, no tracking, no analytics, no cloud — your data never leaves your Mac."
+        url="https://sharkfin.sh/privacy"
+      />
       <div className="flex flex-col items-start justify-start gap-3">
         <h2 className="text-heading-5 leading-none font-semibold">
           Sharkfin, the app

@@ -153,7 +153,7 @@ export default function Footer() {
                 <span>Hand crafted with </span>
                 <HeartIcon
                   weight="fill"
-                  className="inline size-5 align-middle text-red-500"
+                  className="inline size-5 origin-center animate-heartbeat align-middle text-red-500 motion-reduce:animate-none"
                 />
                 <span> in Salt Lake City</span>
               </p>

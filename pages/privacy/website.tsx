@@ -1,11 +1,17 @@
 import PrivacyLayout, {
   FeatureTag,
 } from "@/components/pages/privacy/PrivacyLayout";
+import PageHead from "@/components/shell/PageHead";
 import TextLink from "@/components/TextLink";
 
 export default function PrivacyWebsite() {
   return (
     <PrivacyLayout active="website">
+      <PageHead
+        title="Sharkfin — Site Privacy"
+        description="What sharkfin.sh collects while you're browsing: anonymous, aggregated analytics via Vercel — no cookies, no personal data, no trackers."
+        url="https://sharkfin.sh/privacy/website"
+      />
       <div className="flex flex-col items-start justify-start gap-3">
         <h2 className="text-heading-5 leading-none font-semibold">
           sharkfin.sh, the website
