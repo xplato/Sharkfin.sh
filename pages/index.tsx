@@ -1,9 +1,11 @@
 import Head from "next/head";
 
-import ImageGallerySection from "@/ui/pages/home/components/ImageGallerySection";
 import ImageSection from "@/ui/pages/home/components/ImageSection";
+import FaqSection from "@/ui/pages/home/FaqSection";
 import FeatureSection from "@/ui/pages/home/FeatureSection";
 import HeroSection from "@/ui/pages/home/HeroSection";
+import HowItWorksSection from "@/ui/pages/home/HowItWorksSection";
+import ImageGallerySection from "@/ui/pages/home/ImageGallerySection";
 
 import Closeup1Image from "@/public/images/app/closeup-1.webp";
 import Closeup2Image from "@/public/images/app/closeup-2.webp";
@@ -52,6 +54,7 @@ export default function Home() {
       <HeroSection />
       <FeatureSection />
       <ImageGallerySection />
+      <HowItWorksSection />
       <ImageSection
         title="Liquid Glass."
         subtitle="A look that's distinctly Mac."
@@ -97,6 +100,7 @@ export default function Home() {
         variant="dark"
         forceTooltipColorMode="dark"
       />
+      <FaqSection />
     </>
   );
 }

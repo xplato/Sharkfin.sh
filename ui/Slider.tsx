@@ -43,7 +43,7 @@ const Slider = forwardRef<SliderHandle, SliderProps>(function Slider(
   {
     children,
     containerMaxWidth = "72rem",
-    gutter = "1.5rem",
+    gutter = "0rem",
     gap = "20px",
     showControls = true,
     onActiveIndexChange,
