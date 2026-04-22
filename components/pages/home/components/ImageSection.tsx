@@ -1,8 +1,7 @@
 import Image from "next/image";
-
 import WithDecorativeGlassTooltip, {
   ColorMode,
-} from "@/ui/WithDecorativeGlassTooltip";
+} from "@/components/WithDecorativeGlassTooltip";
 
 import { ImageType } from "@/lib/types";
 import { cn } from "@/lib/utils";

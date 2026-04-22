@@ -1,13 +1,12 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
+import GlassButton from "@/components/GlassButton";
 import {
   AppStoreLogoIcon,
   ArrowLeftIcon,
   CheckCircleIcon,
   PlanetIcon,
 } from "@phosphor-icons/react";
-
-import GlassButton from "@/ui/GlassButton";
 
 import { cn } from "@/lib/utils";
 

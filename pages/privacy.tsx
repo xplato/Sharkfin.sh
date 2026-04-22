@@ -1,6 +1,7 @@
-import GradientText from "@/ui/GradientText";
-import PrivacyLayout, { FeatureTag } from "@/ui/pages/privacy/PrivacyLayout";
-import TextLink from "@/ui/TextLink";
+import PrivacyLayout, {
+  FeatureTag,
+} from "@/components/pages/privacy/PrivacyLayout";
+import TextLink from "@/components/TextLink";
 
 export default function PrivacyApp() {
   return (
@@ -42,10 +43,9 @@ export default function PrivacyApp() {
           .
         </p>
         <p className="text-lg">
-          Once the models are downloaded, Sharkfin makes{" "}
-          <GradientText>zero</GradientText> HTTP requests. No telemetry, no
-          update pings, no phoning home — ever. You can disconnect from the
-          internet and Sharkfin will keep working exactly the same.
+          Once the models are downloaded, Sharkfin makes zero HTTP requests. No
+          telemetry, no update pings, no phoning home — ever. You can disconnect
+          from the internet and Sharkfin will keep working exactly the same.
         </p>
         <p className="text-lg">
           Sharkfin does write logs to a file on your device to help with

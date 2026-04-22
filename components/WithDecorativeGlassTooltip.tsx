@@ -148,8 +148,7 @@ export default function WithDecorativeGlassTooltip({
                 "-z-10 rounded-full backdrop-blur-sm",
                 forceColorMode === "light" && "glass-button-bg",
                 forceColorMode === "dark" && "glass-button-bg-dark",
-                forceColorMode === undefined &&
-                  "glass-button-bg dark:glass-button-bg-dark",
+                forceColorMode === undefined && "glass-button-bg",
               )}
             />
             <p className="relative z-10 text-sm font-medium tracking-tight whitespace-nowrap select-none">

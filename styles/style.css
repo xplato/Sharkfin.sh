@@ -2,12 +2,6 @@
 @import "tw-animate-css";
 @plugin "tailwind-clamp";
 
-@custom-variant dark (&:is(.dark *));
-
-:root {
-  --container-inset: max(1.5rem, calc((100vw - 2560px) / 2 + 1.5rem));
-}
-
 /*
 * Next.js has a subtle bug where saving changes to the stylesheet
 * doesn't always trigger a change in the preview; if you update the
@@ -16,11 +10,10 @@
 * styles.
 */
 .useless {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 @theme {
-  /* SHARKFIN */
   --color-seafoam: #e8f2f7;
   --color-spray: #c8dee9;
   --color-shallows: #92bbce;
@@ -32,49 +25,10 @@
   --color-abyss: #001e2e;
   --color-leviathan: #000f18;
 
-  /* ACCENT */
-  --color-accent: var(--color-sharkfin);
-  --color-accent-foreground: var(--color-seafoam);
-
-  --color-accent-50: var(--color-seafoam);
-  --color-accent-100: var(--color-spray);
-  --color-accent-200: var(--color-shallows);
-  --color-accent-300: var(--color-surf);
-  --color-accent-400: var(--color-tide);
-  --color-accent-500: var(--color-sharkfin);
-  --color-accent-600: var(--color-fathom);
-  --color-accent-700: var(--color-trench);
-  --color-accent-800: var(--color-abyss);
-  --color-accent-900: var(--color-leviathan);
-  --color-accent-950: var(--color-leviathan);
-
-  /*--color-background: #eae9e8;*/
   --color-background: #fcf9f7;
   --color-foreground: #171717;
 
-  /* ///////// */
-
-  --font-zalando: var(--font-zalando);
-  --font-bangers: var(--font-bangers);
-  --font-bricolage-grotesque: var(--font-bricolage-grotesque);
-  --font-chewy: var(--font-chewy);
-  --font-chicle: var(--font-chicle);
-  --font-dm-sans: var(--font-dm-sans);
-  --font-dynapuff: var(--font-dynapuff);
   --font-inter: var(--font-inter);
-  --font-google-sans-code: var(--font-google-sans-code);
-  --font-jetbrains-mono: var(--font-jetbrains-mono);
-  --font-knewave: var(--font-knewave);
-  --font-outfit: var(--font-outfit);
-  --font-plus-jakarta-sans: var(--font-plus-jakarta-sans);
-  --font-league-gothic: var(--font-league-gothic);
-  --font-zalando-expanded: var(--font-zalando-expanded);
-  --font-zalando-semi-expanded: var(--font-zalando-semi-expanded);
-  --font-geist: var(--font-geist);
-  --font-geist-mono: var(--font-geist-mono);
-
-  --font-sans: var(--font-zalando);
-  --font-mono: var(--font-jetbrains-mono);
 
   --glass-gradient: linear-gradient(
     180deg,
@@ -144,17 +98,10 @@
   --gutter: 1.5rem;
 }
 
-/*@media (prefers-color-scheme: dark) {
-  @theme {
-    --color-background: #171717;
-    --color-foreground: #eae9e8;
-  }
-}*/
-
 body {
   background: #fcf9f7;
   color: var(--color-foreground);
-  font-family: ui-sans-serif, system-ui, "Zalando Sans", "Inter", sans-serif;
+  font-family: ui-sans-serif, system-ui, "Inter", sans-serif;
 }
 
 @utility page-container {
@@ -168,14 +115,6 @@ body {
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-}
-
-@utility inset-container-left {
-  left: max(var(--gutter), calc((100vw - 2560px) / 2 + var(--gutter)));
-}
-
-@utility inset-container-right {
-  right: max(var(--gutter), calc((100vw - 2560px) / 2 + var(--gutter)));
 }
 
 .no-scrollbar {
@@ -292,10 +231,6 @@ body {
     mask-mode: match-source, match-source;
   }
 }
-
-/*
----break---
-*/
 
 @theme inline {
   --animate-marquee: marquee var(--duration) infinite linear;

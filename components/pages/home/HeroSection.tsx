@@ -1,10 +1,9 @@
 import Image from "next/image";
+import GlassButton from "@/components/GlassButton";
+import AnimateIn from "@/components/motion/AnimateIn";
+import WithDecorativeGlassTooltip from "@/components/WithDecorativeGlassTooltip";
 import { Apple, Github } from "@thesvg/react";
 import Marquee from "react-fast-marquee";
-
-import GlassButton from "@/ui/GlassButton";
-import AnimateIn from "@/ui/motion/AnimateIn";
-import WithDecorativeGlassTooltip from "@/ui/WithDecorativeGlassTooltip";
 
 import SharkfinAppIcon from "@/public/brand/sharkfin-app-icon.webp";
 import BalloonImage from "@/public/images/balloon.webp";
@@ -219,9 +218,7 @@ export default function HeroSection() {
                   href="https://github.com/xplato/Sharkfin/releases/latest/download/Sharkfin.dmg"
                   download
                   size="lg"
-                  startIcon={
-                    <Apple className="size-full invert dark:invert-0" />
-                  }
+                  startIcon={<Apple className="size-full invert" />}
                   label="Download"
                 />
                 <GlassButton
@@ -229,9 +226,7 @@ export default function HeroSection() {
                   href="https://github.com/xplato/Sharkfin"
                   target="_blank"
                   size="lg"
-                  startIcon={
-                    <Github className="size-full invert dark:invert-0" />
-                  }
+                  startIcon={<Github className="size-full invert" />}
                   label="GitHub"
                 />
               </div>

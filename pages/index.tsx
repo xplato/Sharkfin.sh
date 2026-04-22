@@ -1,11 +1,10 @@
 import Head from "next/head";
-
-import ImageSection from "@/ui/pages/home/components/ImageSection";
-import FaqSection from "@/ui/pages/home/FaqSection";
-import FeatureSection from "@/ui/pages/home/FeatureSection";
-import HeroSection from "@/ui/pages/home/HeroSection";
-import HowItWorksSection from "@/ui/pages/home/HowItWorksSection";
-import ImageGallerySection from "@/ui/pages/home/ImageGallerySection";
+import ImageSection from "@/components/pages/home/components/ImageSection";
+import FaqSection from "@/components/pages/home/FaqSection";
+import FeatureSection from "@/components/pages/home/FeatureSection";
+import HeroSection from "@/components/pages/home/HeroSection";
+import HowItWorksSection from "@/components/pages/home/HowItWorksSection";
+import ImageGallerySection from "@/components/pages/home/ImageGallerySection";
 
 import Closeup1Image from "@/public/images/app/closeup-1.webp";
 import Closeup2Image from "@/public/images/app/closeup-2.webp";

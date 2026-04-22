@@ -41,13 +41,9 @@ const textLinkVariants = cva({
 const underlineVariants = cva({
   base: "",
   variants: {
-    color: {
-      neutral: "",
-      accent: "bg-accent",
-    },
     mode: {
-      light: "",
-      dark: "",
+      light: "bg-foreground",
+      dark: "bg-background",
     },
     size: {
       inherit: "h-px",
@@ -56,13 +52,7 @@ const underlineVariants = cva({
       lg: "h-px",
     },
   },
-  compoundVariants: [
-    { color: "neutral", mode: "light", className: "bg-foreground" },
-    { color: "neutral", mode: "dark", className: "bg-background" },
-    { color: "accent", mode: "light", className: "bg-accent-600" },
-  ],
   defaultVariants: {
-    color: "neutral",
     mode: "light",
     size: "inherit",
   },
@@ -91,7 +81,6 @@ const phantomVariants = cva({
 type TextLinkBaseProps = {
   children: ReactNode;
   className?: string;
-  color?: "neutral" | "accent";
 } & VariantProps<typeof textLinkVariants>;
 
 type TextLinkAsAnchor = TextLinkBaseProps &
@@ -107,7 +96,6 @@ export default function TextLink({
   className,
   href,
   onClick,
-  color = "neutral",
   type = "underlined",
   size = "inherit",
   mode = "light",
@@ -150,7 +138,7 @@ export default function TextLink({
   }, []);
 
   const mergedClassName = cn(textLinkVariants({ type, size, mode }), className);
-  const underlineClass = underlineVariants({ color, mode, size });
+  const underlineClass = underlineVariants({ mode, size });
   const phantomClass = phantomVariants({ mode, size });
 
   const content = (

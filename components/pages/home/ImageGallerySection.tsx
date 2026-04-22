@@ -1,7 +1,6 @@
 import Image from "next/image";
-
-import Slider from "@/ui/Slider";
-import WithDecorativeGlassTooltip from "@/ui/WithDecorativeGlassTooltip";
+import Slider from "@/components/Slider";
+import WithDecorativeGlassTooltip from "@/components/WithDecorativeGlassTooltip";
 
 import { ImageType } from "@/lib/types";
 import { cn } from "@/lib/utils";

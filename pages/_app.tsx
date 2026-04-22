@@ -5,14 +5,12 @@ import { fontClassNames } from "@/lib/fonts";
 
 import "@/styles/style.css";
 
-import BlurStrip from "@/ui/shell/BlurStrip";
-import Footer from "@/ui/shell/Footer";
-
-import { SoundProvider } from "@/lib/sfx/SoundContext";
+import BlurStrip from "@/components/shell/BlurStrip";
+import Footer from "@/components/shell/Footer";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <SoundProvider>
+    <>
       <div className={fontClassNames}>
         <Component {...pageProps} />
         <Footer />
@@ -20,6 +18,6 @@ export default function App({ Component, pageProps }: AppProps) {
       </div>
 
       <Analytics />
-    </SoundProvider>
+    </>
   );
 }

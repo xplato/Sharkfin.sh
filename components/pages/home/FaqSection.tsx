@@ -1,9 +1,8 @@
 import { PropsWithChildren, useState, type ReactNode } from "react";
 import Image from "next/image";
+import AnimateIn from "@/components/motion/AnimateIn";
+import TextLink from "@/components/TextLink";
 import { motion } from "motion/react";
-
-import AnimateIn from "@/ui/motion/AnimateIn";
-import TextLink from "@/ui/TextLink";
 
 import { easeSnapToSilk } from "@/lib/motion";
 import { cn } from "@/lib/utils";

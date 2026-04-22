@@ -1,5 +1,7 @@
-import PrivacyLayout, { FeatureTag } from "@/ui/pages/privacy/PrivacyLayout";
-import TextLink from "@/ui/TextLink";
+import PrivacyLayout, {
+  FeatureTag,
+} from "@/components/pages/privacy/PrivacyLayout";
+import TextLink from "@/components/TextLink";
 
 export default function PrivacyWebsite() {
   return (

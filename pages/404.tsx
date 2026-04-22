@@ -1,10 +1,8 @@
 import Link from "next/link";
+import GlassButton from "@/components/GlassButton";
+import WithPageTransition from "@/components/motion/transitions/WithPageTransition";
+import TextLink from "@/components/TextLink";
 import { ArrowLeftIcon } from "@phosphor-icons/react";
-
-import GlassButton from "@/ui/GlassButton";
-import GradientText from "@/ui/GradientText";
-import WithPageTransition from "@/ui/motion/transitions/WithPageTransition";
-import TextLink from "@/ui/TextLink";
 
 export default function FourOhFour() {
   return (
@@ -14,9 +12,7 @@ export default function FourOhFour() {
           <div className="page-container items-center">
             <div className="flex flex-col items-center justify-center gap-8">
               <div className="flex flex-col items-center justify-center gap-4">
-                <h1 className="text-heading-2 leading-none font-bold">
-                  <GradientText>404</GradientText>
-                </h1>
+                <h1 className="text-heading-2 leading-none font-bold">404</h1>
                 <h2 className="text-foreground/75 text-subheading leading-none font-medium tracking-tight">
                   Page not found
                 </h2>

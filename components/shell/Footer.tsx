@@ -98,9 +98,7 @@ export default function Footer() {
                     href="https://github.com/xplato/Sharkfin/releases/latest/download/Sharkfin.dmg"
                     download
                     size="md"
-                    startIcon={
-                      <Apple className="size-full invert dark:invert-0" />
-                    }
+                    startIcon={<Apple className="size-full invert" />}
                     label="Download"
                   />
                   <GlassButton
@@ -108,9 +106,7 @@ export default function Footer() {
                     href="https://github.com/xplato/Sharkfin"
                     target="_blank"
                     size="md"
-                    startIcon={
-                      <Github className="size-full invert dark:invert-0" />
-                    }
+                    startIcon={<Github className="size-full invert" />}
                     label="GitHub"
                   />
                 </div>

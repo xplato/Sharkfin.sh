@@ -66,7 +66,7 @@ export default function ScrollLinkedStepSection({ steps }: Props) {
 
   return (
     <div ref={rootRef} className="grid w-full grid-cols-2 gap-16">
-      <div className="flex flex-col pb-[23vh]">
+      <div className="flex flex-col pb-[35vh]">
         {steps.map((step, i) => {
           const IconComponent = step.icon;
           return (
