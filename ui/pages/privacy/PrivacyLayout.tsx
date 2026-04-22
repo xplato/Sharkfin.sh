@@ -9,7 +9,6 @@ import {
 
 import GlassButton from "@/ui/GlassButton";
 
-import { usePlaySfx } from "@/lib/sfx/SoundContext";
 import { cn } from "@/lib/utils";
 
 export type PrivacyTab = "app" | "website";
@@ -95,12 +94,9 @@ function TabLink({
   tab: (typeof TAB_LINKS)[number];
   active: boolean;
 }) {
-  const { playSfx } = usePlaySfx();
-
   return (
     <Link
       href={tab.href}
-      onClick={() => playSfx("click")}
       className={cn(
         "ease-material flex flex-1 flex-row items-center justify-center gap-2 rounded-xl px-4 py-2 text-base font-medium tracking-tight transition-all duration-300 sm:flex-none sm:px-5",
         active
