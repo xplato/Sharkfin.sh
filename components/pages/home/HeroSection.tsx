@@ -1,9 +1,10 @@
 import Image from "next/image";
+import { Apple, Github } from "@thesvg/react";
+import Marquee from "react-fast-marquee";
+
 import GlassButton from "@/components/GlassButton";
 import AnimateIn from "@/components/motion/AnimateIn";
 import WithDecorativeGlassTooltip from "@/components/WithDecorativeGlassTooltip";
-import { Apple, Github } from "@thesvg/react";
-import Marquee from "react-fast-marquee";
 
 import SharkfinAppIcon from "@/public/brand/sharkfin-app-icon.webp";
 import BalloonImage from "@/public/images/balloon.webp";

@@ -1,4 +1,5 @@
 import Head from "next/head";
+
 import ImageSection from "@/components/pages/home/components/ImageSection";
 import FaqSection from "@/components/pages/home/FaqSection";
 import FeatureSection from "@/components/pages/home/FeatureSection";

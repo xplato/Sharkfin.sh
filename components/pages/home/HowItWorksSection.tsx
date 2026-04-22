@@ -1,12 +1,13 @@
 import Image from "next/image";
-import ScrollLinkedStepSection, {
-  type ScrollLinkedStep,
-} from "@/components/ScrollLinkedStepSection";
 import {
   CloudArrowDownIcon,
   FolderPlusIcon,
   MagnifyingGlassIcon,
 } from "@phosphor-icons/react";
+
+import ScrollLinkedStepSection, {
+  type ScrollLinkedStep,
+} from "@/components/ScrollLinkedStepSection";
 
 import Step1Image from "@/public/images/app/step-1.webp";
 import Step2Image from "@/public/images/app/step-2.webp";

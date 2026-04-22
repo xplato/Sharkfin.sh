@@ -30,22 +30,6 @@
 
   --font-inter: var(--font-inter);
 
-  --glass-gradient: linear-gradient(
-    180deg,
-    #fff9,
-    #ffffff96 25%,
-    #fff9 50%,
-    #ffffffd6 75%
-  );
-
-  --glass-gradient-dark: linear-gradient(
-    180deg,
-    #ffffff1a,
-    #ffffff0a 25%,
-    #ffffff12 50%,
-    #ffffff1f 75%
-  );
-
   /* Typography */
   --clamp-heading: 4rem, 10rem;
   --font-size-heading: var(--clamp-heading);
@@ -87,6 +71,22 @@
   --clamp-cloud: 12rem, 28rem;
   --spacing-cloud: var(--clamp-cloud);
 
+  --glass-gradient: linear-gradient(
+    180deg,
+    #fff9,
+    #ffffff96 25%,
+    #fff9 50%,
+    #ffffffd6 75%
+  );
+
+  --glass-gradient-dark: linear-gradient(
+    180deg,
+    #ffffff1a,
+    #ffffff0a 25%,
+    #ffffff12 50%,
+    #ffffff1f 75%
+  );
+
   /* Easing */
   --ease-snap-to-silk: cubic-bezier(0.31, 0.72, 0.35, 1);
   --ease-catapult: cubic-bezier(0.6, 0, 0, 1);
@@ -126,16 +126,6 @@ body {
   width: 0;
   height: 0;
   display: none;
-}
-
-@layer base {
-  .font-outline-2 {
-    -webkit-text-stroke: 2px white;
-  }
-
-  .font-outline-4 {
-    -webkit-text-stroke: 4px var(--foreground);
-  }
 }
 
 .glass-button-bg {

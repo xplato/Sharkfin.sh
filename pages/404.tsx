@@ -1,8 +1,9 @@
 import Link from "next/link";
+import { ArrowLeftIcon } from "@phosphor-icons/react";
+
 import GlassButton from "@/components/GlassButton";
 import WithPageTransition from "@/components/motion/transitions/WithPageTransition";
 import TextLink from "@/components/TextLink";
-import { ArrowLeftIcon } from "@phosphor-icons/react";
 
 export default function FourOhFour() {
   return (

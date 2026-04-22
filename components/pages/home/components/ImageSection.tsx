@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import WithDecorativeGlassTooltip, {
   ColorMode,
 } from "@/components/WithDecorativeGlassTooltip";

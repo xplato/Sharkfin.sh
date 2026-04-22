@@ -8,7 +8,7 @@
     "^next(.*)$",
     "<THIRD_PARTY_MODULES>",
     "",
-    "^@/ui/(.*)$",
+    "^@/components/(.*)$",
     "",
     "^@/lib/(.*)$",
     "",
