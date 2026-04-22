@@ -58,6 +58,10 @@ const FOOTER_COLUMNS: Array<{
         label: "Source code",
         href: "https://github.com/xplato/Sharkfin.sh",
       },
+      {
+        label: "Site privacy",
+        href: "/privacy/website",
+      },
     ],
   },
 ];
