@@ -20,11 +20,13 @@ const FAQS: Faq[] = [
     question: "Is Sharkfin really free? What's the catch?",
     answer: (
       <>
-        <div className="w-full max-w-3xl">
-          <Image
-            src={NoCatchGif}
-            alt="Biff from Back to the Future saying 'no catch, just keep it a secret'"
-          />
+        <div className="flex w-full">
+          <div className="overflow-hidden rounded-2xl">
+            <Image
+              src={NoCatchGif}
+              alt="Biff from Back to the Future saying 'no catch, just keep it a secret'"
+            />
+          </div>
         </div>
 
         <FaqText>
