@@ -8,7 +8,7 @@
             <sparkle:version>13</sparkle:version>
             <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/xplato/Sharkfin/releases/download/v1.0.0-12/Sharkfin-1.0.0-13.zip" length="26121013" type="application/octet-stream" sparkle:edSignature="s/Ol34Ti2ZPLHfdQkfFQu5zrQLZBjFKicJ1X9Aq5FWX9W74eHF6NTruHfw+qCwcA1kWhV2JiFxSGKKFH88M9Bg=="/>
+            <enclosure url="https://github.com/xplato/Sharkfin/releases/download/v1.0.0-13/Sharkfin-1.0.0-13.zip" length="26121013" type="application/octet-stream" sparkle:edSignature="s/Ol34Ti2ZPLHfdQkfFQu5zrQLZBjFKicJ1X9Aq5FWX9W74eHF6NTruHfw+qCwcA1kWhV2JiFxSGKKFH88M9Bg=="/>
         </item>
         <item>
             <title>1.0.0</title>
