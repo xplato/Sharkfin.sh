@@ -9,7 +9,7 @@ export default function PrivacyWebsite() {
     <PrivacyLayout active="website">
       <PageHead
         title="Sharkfin — Site Privacy"
-        description="What sharkfin.sh collects while you're browsing: anonymous, aggregated analytics via Vercel — no cookies, no personal data, no trackers."
+        description="What sharkfin.sh collects while you're browsing: anonymous, aggregated analytics and performance measurement via Vercel — no cookies, no personal data, no trackers."
         url="https://sharkfin.sh/privacy/website"
       />
       <div className="flex flex-col items-start justify-start gap-3">
@@ -33,11 +33,12 @@ export default function PrivacyWebsite() {
           <TextLink href="https://vercel.com" size="md">
             Vercel
           </TextLink>{" "}
-          and uses Vercel Web Analytics to measure page views. Unlike the app,
-          the site does collect some anonymous, aggregated data about visits —
-          but nothing that can identify you personally. Since the app
-          doesn&apos;t contain analytics, these web analytics helps me get an
-          idea of how many people are interested in Sharkfin.
+          and uses Vercel Web Analytics and Speed Insights to measure page views
+          and performance. Unlike the app, the site does collect some anonymous,
+          aggregated data about visits — but nothing that can identify you
+          personally. Since the app doesn&apos;t contain analytics, this helps
+          me get an idea of how many people are interested in Sharkfin and
+          whether the site is fast for them.
         </p>
         <p className="text-lg">
           Vercel Analytics records things like which pages are visited, the
@@ -56,9 +57,23 @@ export default function PrivacyWebsite() {
           .
         </p>
         <p className="text-lg">
-          Beyond analytics, the site sets no cookies and stores nothing in your
-          browser. There are no third-party trackers, no advertising pixels, and
-          no social widgets that phone home.
+          Speed Insights measures page performance — things like how fast pages
+          load and how quickly they become interactive (Core Web Vitals). It
+          collects only anonymous, aggregated data: route, country, device type,
+          browser, and connection type. No cookies, no personal data, and no
+          cross-session tracking. Details are on{" "}
+          <TextLink
+            href="https://vercel.com/docs/speed-insights/privacy-policy"
+            size="md"
+          >
+            Vercel&apos;s Speed Insights privacy page
+          </TextLink>
+          .
+        </p>
+        <p className="text-lg">
+          Beyond analytics and performance measurement, the site sets no cookies
+          and stores nothing in your browser. There are no third-party trackers,
+          no advertising pixels, and no social widgets that phone home.
         </p>
         <p className="text-lg">
           The site is open source too — you can inspect the code at{" "}
