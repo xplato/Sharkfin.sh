@@ -1,13 +1,9 @@
-import { useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { useGSAP } from "@gsap/react";
 import { type Icon } from "@phosphor-icons/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import { ImageType } from "@/lib/types";
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+import { cn } from "@/lib/utils";
 
 export interface ScrollLinkedStep {
   icon: Icon;
@@ -21,51 +17,35 @@ interface Props {
 }
 
 export default function ScrollLinkedStepSection({ steps }: Props) {
-  const rootRef = useRef<HTMLDivElement>(null);
-  const imageRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [activeIndex, setActiveIndex] = useState(0);
   const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  useGSAP(
-    () => {
-      const images = imageRefs.current.filter(
-        (el): el is HTMLDivElement => el !== null,
-      );
-      if (images.length === 0) return;
-
-      const setActive = (idx: number) => {
-        images.forEach((el, i) => {
-          gsap.to(el, {
-            opacity: i === idx ? 1 : 0,
-            duration: 0.5,
-            ease: "power2.out",
-            overwrite: true,
-          });
-        });
-      };
-
-      gsap.set(images, { opacity: 0 });
-      gsap.set(images[0], { opacity: 1 });
-
-      const triggers = stepRefs.current.map((el, i) =>
-        el
-          ? ScrollTrigger.create({
-              trigger: el,
-              start: "center center",
-              onEnter: () => setActive(i),
-              onLeaveBack: () => setActive(Math.max(0, i - 1)),
-            })
-          : null,
-      );
-
-      return () => {
-        triggers.forEach((t) => t?.kill());
-      };
+  const handleIntersection = useCallback(
+    (entries: IntersectionObserverEntry[]) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          const idx = stepRefs.current.indexOf(entry.target as HTMLDivElement);
+          if (idx !== -1) setActiveIndex(idx);
+        }
+      }
     },
-    { scope: rootRef, dependencies: [steps.length] },
+    [],
   );
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleIntersection, {
+      rootMargin: "-40% 0px -40% 0px",
+      threshold: 0,
+    });
+
+    const els = stepRefs.current;
+    els.forEach((el) => el && observer.observe(el));
+
+    return () => observer.disconnect();
+  }, [steps.length, handleIntersection]);
+
   return (
-    <div ref={rootRef} className="grid w-full grid-cols-2 gap-16">
+    <div className="grid w-full grid-cols-2 gap-16">
       <div className="flex flex-col pb-[35vh]">
         {steps.map((step, i) => {
           const IconComponent = step.icon;
@@ -87,16 +67,16 @@ export default function ScrollLinkedStepSection({ steps }: Props) {
         })}
       </div>
 
-      <div>
-        <div className="sticky top-1/2 mt-[23vh] -translate-y-1/2">
+      <div className="mt-[20vh] mb-[calc(50vh-34rem)]">
+        <div className="sticky top-[50vh] -translate-y-1/2">
           <div className="relative h-136 w-full overflow-hidden rounded-3xl shadow-lg">
             {steps.map((step, i) => (
               <div
                 key={i}
-                ref={(el) => {
-                  imageRefs.current[i] = el;
-                }}
-                className="absolute inset-0"
+                className={cn(
+                  "absolute inset-0 transition-opacity duration-500 ease-out",
+                  i === activeIndex ? "opacity-100" : "opacity-0",
+                )}
               >
                 <Image
                   src={step.image.src}
