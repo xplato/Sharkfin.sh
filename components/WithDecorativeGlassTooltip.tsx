@@ -139,7 +139,7 @@ export default function WithDecorativeGlassTooltip({
               forceColorMode === "dark" &&
                 "glass-button-shadow-dark glass-border-dark text-white",
               forceColorMode === undefined &&
-                "glass-button-shadow glass-border text-foreground dark:glass-button-shadow-dark dark:glass-border-dark dark:text-white",
+                "glass-button-shadow glass-border text-foreground",
             )}
           >
             <span
